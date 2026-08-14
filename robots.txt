@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://megahertz.co.kr/sitemap.xml
