@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>메가헤르츠 · 고객 대시보드</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --blue:#3182F6;--blue-press:#1B64DA;--blue-deep:#0064FF;--blue-tint:#EAF2FF;
+    --ink:#191F28;--sub:#4E5968;--muted:#8B95A1;--line:#E5E8EB;--card:#fff;--bg:#F2F4F6;--section:#F9FAFB;
+    --ok:#15A05A;--warn:#F59E0B;--shadow:0 2px 12px rgba(0,20,60,.06),0 8px 28px rgba(0,20,60,.05);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --blue:#4C8DF8;--blue-press:#3A7CE8;--blue-deep:#5B9BFF;--blue-tint:#16233B;
+    --ink:#EAECEF;--sub:#B0B8C1;--muted:#7A828C;--line:#2A2F36;--card:#1A1D21;--bg:#0E0F11;--section:#15171A;
+    --ok:#37C77F;--warn:#F5A623;--shadow:0 2px 12px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.3);
+  }}
+  :root[data-theme="dark"]{
+    --blue:#4C8DF8;--blue-press:#3A7CE8;--blue-deep:#5B9BFF;--blue-tint:#16233B;
+    --ink:#EAECEF;--sub:#B0B8C1;--muted:#7A828C;--line:#2A2F36;--card:#1A1D21;--bg:#0E0F11;--section:#15171A;
+    --ok:#37C77F;--warn:#F5A623;--shadow:0 2px 12px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.3);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{background:var(--bg);color:var(--ink);font-family:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:520px;margin:0 auto;min-height:100vh;padding:0 20px 60px;}
+  .top{display:flex;align-items:center;gap:9px;padding:18px 2px 22px;}
+  .top .wave{width:28px;height:19px;}
+  .top .wm b{font-size:18px;font-weight:900;letter-spacing:-0.05em;color:var(--ink);display:block;line-height:1;}
+  .top .wm small{font-size:8.5px;font-weight:800;letter-spacing:.24em;color:var(--muted);}
+  .top .role{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted);}
+
+  /* login */
+  #login{display:flex;flex-direction:column;align-items:center;padding-top:48px;text-align:center;}
+  #login .ic{width:64px;height:64px;border-radius:20px;background:var(--blue-tint);color:var(--blue-deep);display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:20px;}
+  #login h1{font-size:23px;font-weight:900;letter-spacing:-0.03em;margin-bottom:8px;}
+  #login p{font-size:14.5px;color:var(--sub);line-height:1.6;margin-bottom:26px;}
+  #login .box{width:100%;max-width:340px;}
+  #code{width:100%;border:1.5px solid var(--line);border-radius:13px;padding:15px 16px;font-size:17px;font-weight:700;text-align:center;letter-spacing:.08em;background:var(--card);color:var(--ink);text-transform:uppercase;}
+  #code:focus{outline:none;border-color:var(--blue);}
+  .btn{width:100%;margin-top:12px;background:var(--blue);color:#fff;border:0;border-radius:13px;padding:15px;font-size:16px;font-weight:800;cursor:pointer;transition:transform .08s,background .15s;}
+  .btn:active{transform:scale(.98);background:var(--blue-press);}
+  .btn:disabled{background:#A5B4FC;cursor:wait;}
+  #err{display:none;margin-top:14px;font-size:13.5px;color:#E11D48;font-weight:600;}
+  #login .hint{margin-top:20px;font-size:12.5px;color:var(--muted);line-height:1.6;}
+
+  /* dashboard */
+  #dash{display:none;}
+  .hello{font-size:14px;color:var(--sub);margin-bottom:3px;}
+  .hello b{color:var(--ink);font-weight:800;}
+  .statuschip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent);padding:5px 11px;border-radius:99px;margin:8px 0 20px;}
+  .statuschip .dot{width:6px;height:6px;border-radius:50%;background:var(--ok);}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:17px 16px;box-shadow:var(--shadow);}
+  .kpi .lab{font-size:12.5px;color:var(--muted);font-weight:600;margin-bottom:7px;}
+  .kpi b{font-size:28px;font-weight:900;letter-spacing:-0.04em;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1;}
+  .kpi b .u{font-size:15px;font-weight:800;color:var(--sub);margin-left:2px;}
+  .kpi.accent b{color:var(--blue);}
+  .sec{margin-top:26px;}
+  .sec .h{font-size:16px;font-weight:900;letter-spacing:-0.02em;margin-bottom:13px;}
+  /* 채널 카드 */
+  .chan{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:11px;overflow:hidden;box-shadow:var(--shadow);}
+  .chan-h{display:flex;align-items:center;gap:12px;padding:15px 16px;cursor:pointer;user-select:none;}
+  .chan-h .ci{width:36px;height:36px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:14px;}
+  .chan-h .nm{font-size:15px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);flex:1;}
+  .chan-h .cnt{font-size:13px;font-weight:800;color:var(--blue);background:var(--blue-tint);padding:4px 11px;border-radius:99px;}
+  .chan-h .chev{color:var(--muted);font-size:18px;transition:transform .2s;margin-left:2px;}
+  .chan.open .chev{transform:rotate(90deg);}
+  .posts{display:none;border-top:1px solid var(--line);}
+  .chan.open .posts{display:block;}
+  .post{display:flex;align-items:center;gap:10px;padding:12px 16px;text-decoration:none;border-bottom:1px solid var(--section);}
+  .post:last-child{border-bottom:0;}
+  .post .pt{flex:1;min-width:0;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .post .pm{font-size:11.5px;color:var(--muted);flex-shrink:0;}
+  .post .pv{font-size:12px;font-weight:800;color:var(--blue);flex-shrink:0;}
+  .post.nolink .pv{color:var(--muted);}
+  .c-naver,.c-nblog{background:#03C75A;}.c-insta{background:linear-gradient(135deg,#F58529,#DD2A7B 55%,#8134AF);}
+  .c-tstory{background:#EB531F;}.c-web{background:#111827;}.c-cafe{background:#2DB400;}
+  .c-threads{background:#101010;}.c-video{background:var(--blue);}.c-place{background:#03C75A;}.c-kin{background:#00C73C;}.c-etc{background:var(--muted);}
+  .foot{margin-top:34px;text-align:center;font-size:12px;color:var(--muted);line-height:1.7;}
+  .foot a{color:var(--blue);text-decoration:none;font-weight:700;}
+  .logout{display:block;margin:22px auto 0;background:none;border:1px solid var(--line);color:var(--sub);font-size:13px;font-weight:700;padding:10px 18px;border-radius:10px;cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <svg class="wave" viewBox="0 0 32 20" fill="none" aria-hidden="true"><path d="M2 13 L6 13 L9 3.5 L13 16.5 L17 2.5 L21 16.5 L23.5 9 L26 13 L30 13" stroke="var(--ink)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="wm"><b>MHz</b><small>메가헤르츠</small></span>
+    <span class="role">고객 대시보드</span>
+  </div>
+
+  <!-- 로그인 -->
+  <div id="login">
+    <div class="ic">🔎</div>
+    <h1>상호명을 입력하세요</h1>
+    <p>메가헤르츠에 등록된 우리 업체 상호명을 넣으면<br>작업 현황을 바로 확인할 수 있어요.</p>
+    <div class="box">
+      <input id="code" placeholder="예) 메가치과" autocomplete="off">
+      <button class="btn" id="enter">현황 보기</button>
+      <div id="err">등록된 상호를 찾지 못했습니다. 상호명을 다시 확인해 주세요.</div>
+    </div>
+    <p class="hint">조회가 안 되시나요? 담당 매니저에게 문의하거나<br>카카오톡 <b>haebin1111</b> 로 연락 주세요.</p>
+  </div>
+
+  <!-- 대시보드 -->
+  <div id="dash">
+    <p class="hello">안녕하세요, <b id="bizName">고객사</b>님 👋</p>
+    <span class="statuschip"><span class="dot"></span><span id="statusText">정상 운영 중</span></span>
+    <div class="cards">
+      <div class="kpi accent"><div class="lab">전체 발행</div><b><span id="kTot">0</span><span class="u">건</span></b></div>
+      <div class="kpi"><div class="lab">운영 채널</div><b><span id="kCh">0</span><span class="u">개</span></b></div>
+    </div>
+    <div class="sec">
+      <div class="h">채널별 발행 현황 <span style="font-size:12px;font-weight:600;color:var(--muted)">· 눌러서 링크 확인</span></div>
+      <div id="chanList"></div>
+    </div>
+    <button class="logout" id="logout">다른 업체 보기</button>
+    <div class="foot">궁금한 점은 담당 매니저 또는 카카오톡 <a href="https://open.kakao.com/o/sbhh0eIi" target="_blank" rel="noopener">haebin1111</a> 로 문의 주세요.</div>
+  </div>
+</div>
+
+<script>
+  var WEBAPP = "https://script.google.com/macros/s/AKfycbxH2U6a8Fyu-kfYHX2SQqJBK5g7b8KSkI1Qpd6ofOWaf3LKEjFC71MtpXRD-X3Qknlrzg/exec";
+  var chanClass = {"네이버":"c-naver","네이버블로그":"c-nblog","블로그":"c-nblog","네이버지식인":"c-kin","지식인":"c-kin","플레이스":"c-place","인스타그램":"c-insta","인스타":"c-insta","티스토리":"c-tstory","홈페이지":"c-web","웹사이트":"c-web","네이버카페":"c-cafe","카페":"c-cafe","스레드":"c-threads","영상":"c-video","숏폼":"c-video"};
+  var chanMark = {"네이버":"N","네이버블로그":"N","블로그":"N","네이버지식인":"K","지식인":"K","플레이스":"P","인스타그램":"◎","인스타":"◎","티스토리":"T","홈페이지":"</>","웹사이트":"</>","네이버카페":"C","카페":"C","스레드":"@","영상":"▶","숏폼":"▶"};
+  var _cb = 0;
+
+  function el(id){return document.getElementById(id);}
+  function esc(s){return String(s||"").replace(/[<>&"]/g,function(c){return{"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c];});}
+
+  function render(d){
+    el("enter").disabled=false; el("enter").textContent="현황 보기";
+    if(!d || !d.ok){ el("err").style.display="block"; return; }
+    el("err").style.display="none";
+    var s=d.stats||{};
+    el("bizName").textContent=s.biz||"고객사";
+    el("statusText").textContent=s.status||"정상 운영 중";
+    el("kTot").textContent=s.total||0;
+    el("kCh").textContent=s.channelCount||0;
+    var list=el("chanList"); list.innerHTML="";
+    var chans=d.channels||[];
+    if(!chans.length){ list.innerHTML='<div class="chan"><div class="chan-h"><div class="nm" style="color:var(--muted);font-weight:600">아직 등록된 발행 내역이 없습니다.</div></div></div>'; }
+    chans.forEach(function(c,idx){
+      var cc=chanClass[c.name]||"c-etc"; var mk=chanMark[c.name]||(c.name||"·").slice(0,1);
+      var posts=(c.posts||[]).map(function(pp){
+        var has=pp.link && /^https?:\/\//.test(pp.link);
+        var tag=has?"a":"div"; var href=has?(' href="'+esc(pp.link)+'" target="_blank" rel="noopener"'):"";
+        return '<'+tag+' class="post'+(has?"":" nolink")+'"'+href+'>'+
+          '<span class="pt">'+esc(pp.title)+'</span>'+
+          '<span class="pm">'+esc(pp.time)+'</span>'+
+          '<span class="pv">'+(has?"보기 ›":"링크없음")+'</span></'+tag+'>';
+      }).join("");
+      var open = idx===0 ? " open" : "";
+      list.insertAdjacentHTML("beforeend",
+        '<div class="chan'+open+'">'+
+        '<div class="chan-h" onclick="this.parentNode.classList.toggle(\'open\')">'+
+        '<div class="ci '+cc+'">'+esc(mk)+'</div>'+
+        '<div class="nm">'+esc(c.name)+'</div>'+
+        '<div class="cnt">'+(c.count||0)+'건</div>'+
+        '<div class="chev">›</div></div>'+
+        '<div class="posts">'+posts+'</div></div>');
+    });
+    el("login").style.display="none"; el("dash").style.display="block";
+    try{ history.replaceState(null,"","?c="+encodeURIComponent(el("code").value.trim())); }catch(e){}
+    window.scrollTo(0,0);
+  }
+
+  function load(code){
+    if(!code){ el("err").textContent="코드를 입력해 주세요."; el("err").style.display="block"; return; }
+    el("err").style.display="none"; el("enter").disabled=true; el("enter").textContent="확인 중...";
+    var name="__dcb"+(++_cb);
+    window[name]=function(data){ try{delete window[name];}catch(e){} render(data); };
+    var s=document.createElement("script");
+    s.onerror=function(){ el("enter").disabled=false; el("enter").textContent="현황 보기"; el("err").textContent="연결에 실패했습니다. 잠시 후 다시 시도해 주세요."; el("err").style.display="block"; };
+    s.src=WEBAPP+"?dash="+encodeURIComponent(code)+"&callback="+name+"&_="+Date.now();
+    document.body.appendChild(s);
+  }
+
+  el("enter").addEventListener("click",function(){ load(el("code").value.trim()); });
+  el("code").addEventListener("keydown",function(e){ if(e.key==="Enter") load(el("code").value.trim()); });
+  el("logout").addEventListener("click",function(){
+    el("dash").style.display="none"; el("login").style.display="flex"; el("code").value="";
+    try{ history.replaceState(null,"",location.pathname); }catch(e){}
+  });
+  // URL에 ?c=코드 있으면 자동 로그인
+  (function(){ try{ var c=new URLSearchParams(location.search).get("c"); if(c){ el("code").value=c; load(c.trim()); } }catch(e){} })();
+</script>
+</body>
+</html>

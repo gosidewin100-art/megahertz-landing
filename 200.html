@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="네이버·인스타·티스토리·홈페이지·카페·스레드, 그리고 롱폼·숏폼 영상편집까지. 마케팅을 한 곳에서 통으로 운영하는 메가헤르츠. 무료 진단부터 받아보세요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="메가헤르츠 — 마케팅 통합 대행">
+<meta property="og:description" content="8개 채널을 한 팀이 통으로 운영합니다. 첫 진단은 무료 — 결과 먼저 보고 결정하세요.">
+<meta name="theme-color" content="#3182F6">
+<title>메가헤르츠 — 마케팅 통합 대행</title>
+<style>
+  :root {
+    --blue: #3182F6;
+    --blue-press: #1B64DA;
+    --blue-deep: #0064FF;
+    --blue-tint: #EAF2FF;
+    --ink: #191F28;
+    --sub: #4E5968;
+    --muted: #8B95A1;
+    --line: #E5E8EB;
+    --card: #FFFFFF;
+    --bg: #F2F4F6;
+    --section: #F9FAFB;
+    --ok: #15A05A;
+    --shadow: 0 2px 12px rgba(0,20,60,.06), 0 8px 28px rgba(0,20,60,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --blue: #4C8DF8; --blue-press: #3A7CE8; --blue-deep: #5B9BFF; --blue-tint: #16233B;
+      --ink: #EAECEF; --sub: #B0B8C1; --muted: #7A828C; --line: #2A2F36;
+      --card: #1A1D21; --bg: #0E0F11; --section: #15171A; --ok: #37C77F;
+      --shadow: 0 2px 12px rgba(0,0,0,.4), 0 8px 28px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"] {
+    --blue: #4C8DF8; --blue-press: #3A7CE8; --blue-deep: #5B9BFF; --blue-tint: #16233B;
+    --ink: #EAECEF; --sub: #B0B8C1; --muted: #7A828C; --line: #2A2F36;
+    --card: #1A1D21; --bg: #0E0F11; --section: #15171A; --ok: #37C77F;
+    --shadow: 0 2px 12px rgba(0,0,0,.4), 0 8px 28px rgba(0,0,0,.3);
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Pretendard", "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+      "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", system-ui, sans-serif;
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+  }
+  .app { max-width: 480px; margin: 0 auto; background: var(--card); min-height: 100vh; position: relative; overflow: hidden; }
+  @media (min-width: 481px) { .app { box-shadow: 0 0 0 1px var(--line), 0 20px 60px rgba(0,20,60,.10); } }
+
+  /* top bar */
+  .topbar {
+    position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--card) 88%, transparent);
+    backdrop-filter: saturate(160%) blur(12px); border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between; padding: 13px 20px;
+  }
+  .brand { display: flex; align-items: center; gap: 9px; }
+  .brand .wave { width: 30px; height: 20px; display: block; }
+  .brand .mhz-wm { display: flex; flex-direction: column; line-height: 1; }
+  .brand .mhz-wm b { font-size: 20px; font-weight: 900; letter-spacing: -0.05em; color: var(--ink); }
+  .brand .mhz-wm small { font-size: 9px; font-weight: 800; letter-spacing: 0.26em; color: var(--muted); margin-top: 3px; }
+  .topbar .mini { font-size: 12px; font-weight: 700; color: var(--muted); }
+
+  section { padding: 0 24px; }
+  .pad { padding-top: 56px; padding-bottom: 8px; }
+
+  .eyebrow { display: inline-block; background: var(--blue-tint); color: var(--blue-deep);
+    font-size: 12.5px; font-weight: 800; padding: 6px 12px; border-radius: 999px; letter-spacing: 0; margin-bottom: 16px; }
+
+  h1 { font-size: clamp(28px, 8.5vw, 36px); line-height: 1.28; font-weight: 900; letter-spacing: -0.035em; margin: 0 0 16px; text-wrap: balance; }
+  h1 .hl { color: var(--blue); }
+  .lead { font-size: 16.5px; color: var(--sub); line-height: 1.72; margin: 0 0 28px; }
+  .lead b { color: var(--ink); font-weight: 700; }
+
+  /* hero channel ticker */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 32px; }
+  .chip { font-size: 13px; font-weight: 700; color: var(--sub); background: var(--section);
+    border: 1px solid var(--line); padding: 8px 13px; border-radius: 10px; }
+
+  .btn {
+    display: block; width: 100%; text-align: center; text-decoration: none;
+    background: var(--blue); color: #fff; font-weight: 800; font-size: 17px;
+    padding: 17px; border-radius: 14px; border: 0; cursor: pointer;
+    transition: transform .08s ease, background .15s ease; letter-spacing: -0.02em;
+  }
+  .btn:active { transform: scale(.98); background: var(--blue-press); }
+  .btn.ghost { background: var(--section); color: var(--ink); border: 1px solid var(--line); }
+  .btn.kakao { background: #FEE500; color: #191600; }
+  .btn.kakao:active { background: #F2DA00; }
+
+  .hero-cta { margin-bottom: 14px; }
+  .trust { display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+  .trust .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--ok); }
+
+  /* stat strip */
+  .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 36px; }
+  .stat { background: var(--section); border: 1px solid var(--line); border-radius: 14px; padding: 16px 10px; text-align: center; }
+  .stat b { display: block; font-size: 22px; font-weight: 900; color: var(--blue); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: 12px; color: var(--muted); font-weight: 600; }
+
+  /* problem cards */
+  .problem { background: var(--section); margin-top: 48px; padding-top: 52px; padding-bottom: 52px; }
+  .kicker { font-size: 14px; font-weight: 800; color: var(--blue); margin: 0 0 8px; }
+  h2 { font-size: 25px; font-weight: 900; letter-spacing: -0.035em; line-height: 1.35; margin: 0 0 24px; text-wrap: balance; }
+  .plist { display: flex; flex-direction: column; gap: 12px; }
+  .pcard { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px; display: flex; gap: 13px; align-items: flex-start; }
+  .pcard .q { font-size: 22px; line-height: 1; flex-shrink: 0; }
+  .pcard p { margin: 0; font-size: 15.5px; color: var(--ink); font-weight: 600; line-height: 1.55; }
+  .pcard p small { display: block; color: var(--muted); font-weight: 500; font-size: 13.5px; margin-top: 3px; }
+
+  /* services grid */
+  .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px; }
+  .svc { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 16px; transition: border-color .15s, transform .1s; }
+  .svc:active { transform: scale(.98); }
+  .svc .ic { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 13px; box-shadow: 0 3px 10px rgba(0,20,60,.14); }
+  .svc .ic svg { width: 25px; height: 25px; display: block; }
+  .svc .ic.txt { font-weight: 900; font-size: 20px; color: #fff; letter-spacing: -0.04em; }
+  .svc h3 { margin: 0 0 4px; font-size: 15.5px; font-weight: 800; letter-spacing: -0.02em; }
+  .svc p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.5; font-weight: 500; }
+  .svc.wide { grid-column: 1 / -1; }
+  .n-naver { background: #03C75A; } .n-insta { background: linear-gradient(135deg,#F58529,#DD2A7B 55%,#8134AF); }
+  .n-tstory { background: #EB531F; } .n-web { background: #111827; } .n-cafe { background: #2DB400; }
+  .n-threads { background: #101010; } .n-video { background: var(--blue); } .n-more { background: var(--blue-deep); }
+
+  /* process */
+  .steps { display: flex; flex-direction: column; gap: 14px; margin-top: 6px; }
+  .step { display: flex; gap: 15px; align-items: flex-start; }
+  .step .num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+  .step .body h3 { margin: 3px 0 3px; font-size: 16.5px; font-weight: 800; letter-spacing: -0.02em; }
+  .step .body p { margin: 0; font-size: 14.5px; color: var(--sub); line-height: 1.6; }
+  .step .stem { width: 2px; background: var(--line); flex: 1; min-height: 14px; margin: 4px 0 0 14px; }
+
+  /* why */
+  .why { background: var(--section); margin-top: 48px; padding-top: 52px; padding-bottom: 52px; }
+  .wlist { display: flex; flex-direction: column; gap: 12px; }
+  .wcard { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .wcard h3 { margin: 0 0 5px; font-size: 16px; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px; }
+  .wcard h3 .ck { width: 20px; height: 20px; border-radius: 50%; background: var(--blue-tint); color: var(--blue-deep); font-size: 12px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .wcard p { margin: 0; font-size: 14.5px; color: var(--sub); line-height: 1.62; }
+
+  /* form */
+  .form-wrap { padding-top: 56px; padding-bottom: 120px; }
+  .form-card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 26px 22px; box-shadow: var(--shadow); }
+  label { display: block; font-size: 13.5px; font-weight: 700; color: var(--ink); margin: 16px 0 7px; }
+  label:first-of-type { margin-top: 4px; }
+  label .req { color: var(--blue); }
+  input, textarea, select {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 14px 15px;
+    font-size: 16px; font-family: inherit; background: var(--card); color: var(--ink); font-weight: 500;
+  }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--blue); }
+  input::placeholder, textarea::placeholder { color: var(--muted); }
+  .chan-select { display: block; margin-top: 8px; font-size: 0; }
+  .chan-opt { position: relative; display: inline-block; vertical-align: top; margin: 0 8px 8px 0; }
+  .chan-opt input { position: absolute; width: 0; height: 0; opacity: 0; pointer-events: none; }
+  .chan-opt span { display: inline-flex; align-items: center; height: 40px; box-sizing: border-box; font-size: 13.5px; font-weight: 700; color: var(--sub);
+    background: var(--section); border: 1.5px solid var(--line); padding: 0 14px; border-radius: 10px; cursor: pointer; transition: all .12s; line-height: 1; }
+  .chan-opt input:checked + span { background: var(--blue-tint); border-color: var(--blue); color: var(--blue-deep); }
+  .form-card .btn { margin-top: 24px; }
+  .privacy { font-size: 12px; color: var(--muted); text-align: center; margin: 14px 0 0; line-height: 1.6; }
+  .form-done { display: none; text-align: center; padding: 30px 6px; }
+  .form-done .big { width: 60px; height: 60px; border-radius: 50%; background: var(--blue-tint); color: var(--blue-deep); font-size: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+  .form-done h3 { margin: 0 0 8px; font-size: 20px; font-weight: 900; letter-spacing: -0.03em; }
+  .form-done p { margin: 0; font-size: 14.5px; color: var(--sub); line-height: 1.65; }
+
+  /* sticky cta */
+  .sticky {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); z-index: 30;
+    background: color-mix(in srgb, var(--card) 90%, transparent); backdrop-filter: blur(14px) saturate(160%);
+    border-top: 1px solid var(--line); display: flex; gap: 10px;
+  }
+  .sticky .btn { flex: 1; padding: 15px; font-size: 16px; }
+  .sticky .btn.small { flex: 0 0 auto; width: 54px; padding: 15px 0; }
+
+  footer { padding: 40px 24px 34px; background: var(--section); border-top: 1px solid var(--line); }
+  footer p { margin: 0 0 6px; font-size: 12px; color: var(--muted); line-height: 1.7; }
+  footer .fbrand { font-weight: 800; color: var(--sub); font-size: 14px; margin-bottom: 10px; letter-spacing: -0.02em; }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  .hint { font-size: 12.5px; color: var(--muted); margin: 6px 0 0; line-height: 1.5; }
+  .yt-field { display: none; margin-top: 6px; padding: 14px 15px; background: var(--blue-tint); border: 1.5px solid var(--blue); border-radius: 12px; }
+  .yt-field.show { display: block; animation: pop .25s ease; }
+  .yt-field label { margin-top: 0; }
+  .yt-field input { background: var(--card); }
+  @keyframes pop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+  /* 전자책 오픈채팅 CTA */
+  .ebook { background: linear-gradient(150deg, #0064FF 0%, #3182F6 100%); border-radius: 22px; padding: 30px 24px 28px; color: #fff; box-shadow: 0 12px 34px rgba(0,60,180,.28); }
+  .ebook .eb-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.18); color: #fff; font-size: 12.5px; font-weight: 800; padding: 6px 13px; border-radius: 999px; margin-bottom: 16px; }
+  .ebook h2 { color: #fff; font-size: 24px; margin: 0 0 12px; }
+  .ebook p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.92); margin: 0 0 8px; }
+  .ebook .eb-list { margin: 14px 0 22px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .ebook .eb-list li { font-size: 14.5px; font-weight: 600; display: flex; gap: 9px; align-items: flex-start; color: #fff; }
+  .ebook .eb-list li .k { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,.22); font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
+  .ebook .eb-btn { display: block; text-align: center; background: #fff; color: #0057E0; text-decoration: none; font-weight: 900; font-size: 16.5px; padding: 16px; border-radius: 14px; letter-spacing: -0.02em; transition: transform .08s; }
+  .ebook .eb-btn:active { transform: scale(.98); }
+  .ebook .eb-note { font-size: 12.5px; color: rgba(255,255,255,.78); text-align: center; margin: 14px 0 0; }
+  .ebook .eb-price { text-decoration: line-through; opacity: .8; }
+  .eb-picks { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 0; }
+  .eb-pick { display: block; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); border-radius: 14px; padding: 15px 17px; text-decoration: none; transition: background .14s, transform .08s; }
+  .eb-pick:active { transform: scale(.985); background: rgba(255,255,255,.2); }
+  .eb-pick .ep-t { display: block; color: #fff; font-weight: 800; font-size: 15.5px; letter-spacing: -0.02em; margin-bottom: 3px; }
+  .eb-pick .ep-d { display: block; color: rgba(255,255,255,.82); font-size: 12.5px; line-height: 1.5; padding-right: 30px; }
+  .eb-pick { position: relative; }
+  .eb-pick .ep-t::after { content: ""; }
+  .eb-pick > .ep-arrow { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: #fff; font-weight: 800; font-size: 18px; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="topbar">
+    <div class="brand">
+      <svg class="wave" viewBox="0 0 32 20" fill="none" aria-hidden="true"><path d="M2 13 L6 13 L9 3.5 L13 16.5 L17 2.5 L21 16.5 L23.5 9 L26 13 L30 13" stroke="var(--ink)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="mhz-wm"><b>MHz</b><small>메가헤르츠</small></span>
+    </div>
+    <span class="mini">마케팅 통합 대행</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="pad">
+    <span class="eyebrow">채널마다 업체 찾기, 이제 그만</span>
+    <h1>네이버부터 숏폼까지,<br>마케팅 <span class="hl">한 곳에서</span> 끝내세요</h1>
+    <p class="lead">
+      블로그·플레이스·인스타·티스토리·카페·스레드·홈페이지,
+      그리고 <b>롱폼·숏폼 영상 편집</b>까지.
+      채널마다 따로 맡기지 마세요. <b>메가헤르츠</b>가 통으로 운영합니다.
+    </p>
+    <div class="chips">
+      <span class="chip">네이버 블로그·플레이스</span>
+      <span class="chip">인스타그램</span>
+      <span class="chip">티스토리</span>
+      <span class="chip">홈페이지</span>
+      <span class="chip">카페</span>
+      <span class="chip">스레드</span>
+      <span class="chip">영상 편집</span>
+    </div>
+    <a href="#apply" class="btn hero-cta">무료 상담 신청하기</a>
+    <div class="trust"><span class="dot"></span> 진단은 무료입니다 · 결과 먼저 보고 결정하세요</div>
+
+    <div class="stats">
+      <div class="stat"><b>8</b><span>운영 채널</span></div>
+      <div class="stat"><b>1곳</b><span>통합 관리</span></div>
+      <div class="stat"><b>0원</b><span>첫 진단 비용</span></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem reveal">
+    <p class="kicker">이런 고민, 있으셨죠?</p>
+    <h2>채널은 많은데,<br>어디서 새는지 모르겠어요</h2>
+    <div class="plist">
+      <div class="pcard"><span class="q">😮‍💨</span><p>채널이 너무 많아요<small>블로그, 플레이스, 인스타… 뭐부터 해야 할지 모르겠어요.</small></p></div>
+      <div class="pcard"><span class="q">🧩</span><p>업체마다 따로 맡기니 관리가 안 돼요<small>블로그 업체 따로, 영상 업체 따로. 소통 비용만 늘어요.</small></p></div>
+      <div class="pcard"><span class="q">⏰</span><p>직접 하자니 시간이 없어요<small>본업만으로도 벅찬데 콘텐츠까지 챙길 여유가 없어요.</small></p></div>
+      <div class="pcard"><span class="q">📉</span><p>돈은 쓰는데 성과를 모르겠어요<small>광고비는 나가는데 뭐가 효과 있는지 숫자로 안 보여요.</small></p></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="pad reveal">
+    <p class="kicker">이걸 전부 합니다</p>
+    <h2>8개 채널, 한 팀이<br>통으로 운영합니다</h2>
+    <div class="svc-grid">
+      <div class="svc"><div class="ic n-naver txt">N</div><h3>네이버</h3><p>블로그·플레이스 상위노출, 리뷰·예약 세팅</p></div>
+      <div class="svc"><div class="ic n-insta"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r="1.15" fill="#fff" stroke="none"/></svg></div><h3>인스타그램</h3><p>피드·릴스 기획, 해시태그·릴스 편집</p></div>
+      <div class="svc"><div class="ic n-tstory txt">T</div><h3>티스토리</h3><p>SEO 블로그, 구글·다음 검색 유입</p></div>
+      <div class="svc"><div class="ic n-web"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8.5 8 5 12 8.5 16"/><polyline points="15.5 8 19 12 15.5 16"/></svg></div><h3>홈페이지</h3><p>랜딩·상세페이지 제작, 문의 전환 설계</p></div>
+      <div class="svc"><div class="ic n-cafe"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11a2.8 2.8 0 0 1 0 5.6h-1.2"/><path d="M5 9v4a4 4 0 0 0 4 4h1.5a4 4 0 0 0 4-4V9z"/><path d="M7.5 4v2M10.5 3.5v2.5M13.5 4v2"/></svg></div><h3>카페</h3><p>커뮤니티 침투·바이럴, 후기 확산</p></div>
+      <div class="svc"><div class="ic n-threads txt">@</div><h3>스레드</h3><p>바이럴 콘텐츠, 계정 성장·트래픽</p></div>
+      <div class="svc wide"><div class="ic n-video"><svg viewBox="0 0 24 24" fill="#fff"><path d="M9 7.4v9.2L16.2 12z"/></svg></div><h3>롱폼 · 숏폼 영상 편집</h3><p>찍어둔 영상을 끝까지 보는 콘텐츠로. 컷 편집·자막·훅까지 완성본 납품 (첫 편 무료 샘플)</p></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="pad reveal">
+    <p class="kicker">진행 방식</p>
+    <h2>3단계면 시작합니다</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div class="body"><h3>무료 진단</h3><p>지금 우리 채널이 검색 첫 화면에서 어떻게 보이는지, 어디가 비어 있는지 한 장으로 정리해 드립니다.</p><div class="stem"></div></div></div>
+      <div class="step"><div class="num">2</div><div class="body"><h3>맞춤 플랜 제안</h3><p>업종과 예산에 맞춰 어떤 채널부터, 어떤 순서로 채울지 제안합니다. 필요한 것만 고르세요.</p><div class="stem"></div></div></div>
+      <div class="step"><div class="num">3</div><div class="body"><h3>실행 &amp; 리포트</h3><p>콘텐츠 제작부터 발행·최적화까지 대신 운영하고, 성과를 매달 숫자로 보고합니다.</p></div></div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why reveal">
+    <p class="kicker">왜 메가헤르츠인가요?</p>
+    <h2>흩어진 채널을<br>하나로 묶어드립니다</h2>
+    <div class="wlist">
+      <div class="wcard"><h3><span class="ck">✓</span> 통합 관리</h3><p>8개 채널을 한 팀이 맡습니다. 업체마다 연락하고 조율하는 시간이 사라집니다.</p></div>
+      <div class="wcard"><h3><span class="ck">✓</span> 숫자로 보는 성과</h3><p>“열심히 했어요”가 아니라 유입·노출·문의 수를 매달 리포트로 확인하세요.</p></div>
+      <div class="wcard"><h3><span class="ck">✓</span> 업종 맞춤 경험</h3><p>병·의원, 학원, 전문직, 자영업까지. 업종별로 통하는 콘텐츠를 압니다.</p></div>
+      <div class="wcard"><h3><span class="ck">✓</span> 부담 없는 시작</h3><p>첫 진단은 무료, 영상은 첫 편 무료 샘플. 결과를 먼저 보고 결정하세요.</p></div>
+    </div>
+  </section>
+
+  <!-- 전자책 오픈채팅 유입 (세그먼트 3선택) -->
+  <section class="pad reveal">
+    <div class="ebook">
+      <span class="eb-badge">🎁 <b>39만원 상당</b> · 오늘 무료</span>
+      <h2>진단 전에,<br>내 분야 전자책부터 받으세요</h2>
+      <p>대행사가 실제로 쓰는 노하우를 분야별로 담았습니다. <b style="color:#fff">분야를 고르면</b> 바로 열어보실 수 있어요.</p>
+      <div class="eb-picks">
+        <a href="https://north-shirt-ddb.notion.site/3b90d4ee964f81d1a511d8c706a383e9" target="_blank" rel="noopener" class="eb-pick">
+          <span class="ep-t">🧩 종합 마케팅</span>
+          <span class="ep-d">네이버·인스타·티스토리·카페·스레드·홈페이지 다채널</span>
+          <span class="ep-arrow">›</span>
+        </a>
+        <a href="https://north-shirt-ddb.notion.site/3ba0d4ee964f81ebbffaeac58221e554" target="_blank" rel="noopener" class="eb-pick">
+          <span class="ep-t">⚖️ 병원 · 변호사 · 학원</span>
+          <span class="ep-d">전문직 검색 노출 — 환자·의뢰인·학부모가 찾는 자리</span>
+          <span class="ep-arrow">›</span>
+        </a>
+        <a href="https://north-shirt-ddb.notion.site/3ba0d4ee964f81398417d83f6c4370aa" target="_blank" rel="noopener" class="eb-pick">
+          <span class="ep-t">🎬 유튜버 · 크리에이터</span>
+          <span class="ep-d">롱폼→숏폼 재가공, 조회수 터지는 편집 공식</span>
+          <span class="ep-arrow">›</span>
+        </a>
+        <a href="https://north-shirt-ddb.notion.site/3b20d4ee964f8153804dc6c6920d5eb5" target="_blank" rel="noopener" class="eb-pick">
+          <span class="ep-t">📈 블로그 · 애드센스 수익화</span>
+          <span class="ep-d">애드센스 승인부터 검색 노출·수익까지, 실전 개정판</span>
+          <span class="ep-arrow">›</span>
+        </a>
+      </div>
+      <p class="eb-note"><span class="eb-price">각 정가 390,000원</span> → 지금 무료 공개 · 클릭하면 바로 열려요</p>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-wrap reveal" id="apply">
+    <p class="kicker">상담 신청</p>
+    <h2>1분이면 됩니다.<br>무료 진단부터 받아보세요</h2>
+    <div class="form-card">
+      <form id="leadform">
+        <label>성함 / 상호 <span class="req">*</span></label>
+        <input name="name" required placeholder="예) 김대표 / 메가치과">
+        <label>연락처 <span class="req">*</span></label>
+        <input name="contact" required placeholder="전화번호, 카카오톡 ID 또는 이메일">
+        <label>업종</label>
+        <input name="industry" placeholder="예) 치과 / 영어학원 / 법무사무소">
+        <label>관심 있는 채널 <span style="color:var(--muted);font-weight:500">(복수 선택)</span></label>
+        <div class="chan-select">
+          <label class="chan-opt"><input type="checkbox" value="네이버"><span>네이버</span></label>
+          <label class="chan-opt"><input type="checkbox" value="인스타그램" id="chInsta"><span>인스타</span></label>
+          <label class="chan-opt"><input type="checkbox" value="티스토리"><span>티스토리</span></label>
+          <label class="chan-opt"><input type="checkbox" value="홈페이지" id="chWeb"><span>홈페이지</span></label>
+          <label class="chan-opt"><input type="checkbox" value="카페"><span>카페</span></label>
+          <label class="chan-opt"><input type="checkbox" value="스레드" id="chThreads"><span>스레드</span></label>
+          <label class="chan-opt"><input type="checkbox" value="영상편집" id="chVideo"><span>영상편집</span></label>
+          <label class="chan-opt"><input type="checkbox" value="아직모름"><span>아직 모름</span></label>
+        </div>
+        <div class="yt-field" id="ytField">
+          <label>진단받을 유튜브 링크 <span class="req">*</span></label>
+          <input name="youtube" placeholder="https:// 유튜브 채널 또는 영상 링크">
+          <p class="hint">영상편집 진단을 위해 링크를 남겨주세요. 어떤 구간이 이탈되는지 함께 봐드립니다.</p>
+        </div>
+        <div class="yt-field" id="instaField">
+          <label>인스타그램 링크 <span class="req">*</span></label>
+          <input name="insta" placeholder="https:// 인스타그램 프로필 링크">
+          <p class="hint">계정을 보고 피드·릴스 진단을 함께 드립니다.</p>
+        </div>
+        <div class="yt-field" id="webField">
+          <label>홈페이지 주소 <span class="req">*</span></label>
+          <input name="website" placeholder="https:// 운영 중인 웹사이트 주소">
+          <p class="hint">현재 사이트의 검색 노출과 문의 전환 구조를 봐드립니다.</p>
+        </div>
+        <div class="yt-field" id="threadsField">
+          <label>스레드 링크 <span class="req">*</span></label>
+          <input name="threads" placeholder="https:// 스레드 프로필 링크">
+          <p class="hint">계정 톤과 성장 여지를 보고 진단해 드립니다.</p>
+        </div>
+        <label>남기실 말씀 <span style="color:var(--muted);font-weight:500">(선택)</span></label>
+        <textarea name="note" rows="2" placeholder="현재 고민이나 궁금한 점을 적어주세요."></textarea>
+        <button type="submit" class="btn" id="submitBtn">무료 진단 신청하기</button>
+        <p class="privacy">제출 시 상담 목적의 연락에 동의하는 것으로 간주됩니다.<br>남겨주신 정보는 상담 외 용도로 사용되지 않습니다.</p>
+      </form>
+      <div class="form-done" id="formDone">
+        <div class="big">✓</div>
+        <h3>신청이 접수됐어요!</h3>
+        <p>담당자가 확인 후 <b>영업일 기준 하루 안에</b> 남겨주신 연락처로<br>무료 진단 결과와 함께 연락드리겠습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="fbrand">메가헤르츠 · 마케팅 통합 대행</p>
+    <p>네이버 · 인스타그램 · 티스토리 · 홈페이지 · 카페 · 스레드 · 롱폼/숏폼 편집</p>
+    <p>카카오톡 상담 haebin1111 · 010-8140-6335</p>
+    <p>본 페이지는 상담 신청 접수를 위한 페이지입니다.</p>
+  </footer>
+
+  <div class="sticky">
+    <a href="https://open.kakao.com/o/sbhh0eIi" target="_blank" rel="noopener" class="btn kakao small" aria-label="카카오톡 상담">💬</a>
+    <a href="#apply" class="btn">무료 진단 신청하기</a>
+  </div>
+
+</div>
+
+<script>
+  // 스크롤 리빌
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // 폼 제출 → Apps Script(호스팅 시 실제 수집). 실패 시 카톡 안내.
+  var WEBAPP = "https://script.google.com/macros/s/AKfycbxH2U6a8Fyu-kfYHX2SQqJBK5g7b8KSkI1Qpd6ofOWaf3LKEjFC71MtpXRD-X3Qknlrzg/exec";
+  var f = document.getElementById('leadform');
+
+  // 채널 선택 시 해당 링크 입력칸 노출 — 영상편집=유튜브, 인스타, 홈페이지, 스레드
+  var CHAN_FIELDS = [
+    { ch: 'chVideo',   field: 'ytField',      input: 'youtube', tag: '유튜브' },
+    { ch: 'chInsta',   field: 'instaField',   input: 'insta',   tag: '인스타' },
+    { ch: 'chWeb',     field: 'webField',     input: 'website', tag: '홈페이지' },
+    { ch: 'chThreads', field: 'threadsField', input: 'threads', tag: '스레드' }
+  ];
+  CHAN_FIELDS.forEach(function(c){
+    var box = document.getElementById(c.ch);
+    var fld = document.getElementById(c.field);
+    box.addEventListener('change', function(){
+      fld.classList.toggle('show', box.checked);
+      if (!box.checked) { f[c.input].value = ''; }
+    });
+  });
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var btn = document.getElementById('submitBtn');
+    var chans = Array.from(f.querySelectorAll('.chan-opt input:checked')).map(function(c){return c.value;}).join(', ');
+    var links = CHAN_FIELDS.map(function(c){
+      var box = document.getElementById(c.ch);
+      return (box.checked && f[c.input].value) ? (' / ' + c.tag + ':' + f[c.input].value) : '';
+    }).join('');
+    var payload = {
+      name: f.name.value,
+      contact: f.contact.value,
+      note: '[통합대행 상세페이지] 업종:' + (f.industry.value||'-') + ' / 관심채널:' + (chans||'-') + links + ' / 메모:' + (f.note.value||'-'),
+      seg: 'landing_agency'
+    };
+    btn.disabled = true; btn.textContent = '접수 중...';
+    fetch(WEBAPP, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(payload) })
+      .then(function(){ done(); })
+      .catch(function(){ done(); }); // no-cors라 응답은 못 읽음 → 낙관적 완료
+    // 안전장치: 3초 내 강제 완료
+    setTimeout(done, 3000);
+    var finished = false;
+    function done(){ if(finished) return; finished = true;
+      document.getElementById('leadform').style.display='none';
+      document.getElementById('formDone').style.display='block';
+      document.getElementById('formDone').scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+</script>
+</body>
+</html>
