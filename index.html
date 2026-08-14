@@ -59,10 +59,9 @@
     display: flex; align-items: center; justify-content: space-between; padding: 13px 20px;
   }
   .brand { display: flex; align-items: center; gap: 9px; }
-  .brand .wave { width: 30px; height: 20px; display: block; }
-  .brand .mhz-wm { display: flex; flex-direction: column; line-height: 1; }
-  .brand .mhz-wm b { font-size: 20px; font-weight: 900; letter-spacing: -0.05em; color: var(--ink); }
-  .brand .mhz-wm small { font-size: 9px; font-weight: 800; letter-spacing: 0.26em; color: var(--muted); margin-top: 3px; }
+  .brand .logo { height: 36px; width: auto; display: block; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand .logo { filter: invert(1); } }
+  :root[data-theme="dark"] .brand .logo { filter: invert(1); }
   .topbar .mini { font-size: 12px; font-weight: 700; color: var(--muted); }
 
   section { padding: 0 24px; }
@@ -219,8 +218,7 @@
 
   <div class="topbar">
     <div class="brand">
-      <svg class="wave" viewBox="0 0 32 20" fill="none" aria-hidden="true"><path d="M2 13 L6 13 L9 3.5 L13 16.5 L17 2.5 L21 16.5 L23.5 9 L26 13 L30 13" stroke="var(--ink)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span class="mhz-wm"><b>MHz</b><small>메가헤르츠</small></span>
+      <img class="logo" src="/assets/logo.png" alt="MHz 메가헤르츠">
     </div>
     <span class="mini">마케팅 통합 대행</span>
   </div>
