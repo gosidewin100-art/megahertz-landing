@@ -4,11 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="네이버·인스타·티스토리·홈페이지·카페·스레드, 그리고 롱폼·숏폼 영상편집까지. 마케팅을 한 곳에서 통으로 운영하는 메가헤르츠. 무료 진단부터 받아보세요.">
+<link rel="canonical" href="https://megahertz.co.kr/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="메가헤르츠">
+<meta property="og:url" content="https://megahertz.co.kr/">
+<meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="메가헤르츠 — 마케팅 통합 대행">
 <meta property="og:description" content="8개 채널을 한 팀이 통으로 운영합니다. 첫 진단은 무료 — 결과 먼저 보고 결정하세요.">
+<meta property="og:image" content="https://megahertz.co.kr/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="메가헤르츠 — 마케팅 통합 대행">
+<meta name="twitter:description" content="네이버·인스타·티스토리·홈페이지·카페·스레드·영상편집까지 한 팀이 통으로 운영합니다.">
+<meta name="twitter:image" content="https://megahertz.co.kr/assets/logo.png">
+<meta name="naver-site-verification" content="c45bdbdc8a152a38b84fd836306b48e0dd7deb3c">
 <meta name="theme-color" content="#3182F6">
 <title>메가헤르츠 — 마케팅 통합 대행</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://megahertz.co.kr/#org","name":"메가헤르츠",
+ "alternateName":"MHz","url":"https://megahertz.co.kr/","logo":"https://megahertz.co.kr/assets/logo.png",
+ "description":"네이버·인스타그램·티스토리·홈페이지·카페·스레드·영상편집을 한 팀이 통합 운영하는 마케팅 대행사",
+ "areaServed":"KR","knowsLanguage":"ko",
+ "contactPoint":{"@type":"ContactPoint","contactType":"sales","availableLanguage":"Korean","url":"https://megahertz.co.kr/#apply"}},
+{"@type":"WebSite","@id":"https://megahertz.co.kr/#site","url":"https://megahertz.co.kr/",
+ "name":"메가헤르츠","inLanguage":"ko","publisher":{"@id":"https://megahertz.co.kr/#org"}},
+{"@type":"Service","name":"마케팅 통합 대행","serviceType":"온라인 마케팅 대행",
+ "provider":{"@id":"https://megahertz.co.kr/#org"},"areaServed":"KR",
+ "hasOfferCatalog":{"@type":"OfferCatalog","name":"운영 채널",
+  "itemListElement":[
+   {"@type":"Offer","itemOffered":{"@type":"Service","name":"네이버 블로그·플레이스 상위노출"}},
+   {"@type":"Offer","itemOffered":{"@type":"Service","name":"인스타그램 피드·릴스 운영"}},
+   {"@type":"Offer","itemOffered":{"@type":"Service","name":"티스토리 SEO 블로그"}},
+   {"@type":"Offer","itemOffered":{"@type":"Service","name":"홈페이지·랜딩페이지 제작"}},
+   {"@type":"Offer","itemOffered":{"@type":"Service","name":"네이버 카페 바이럴"}},
+   {"@type":"Offer","itemOffered":{"@type":"Service","name":"스레드 계정 성장"}},
+   {"@type":"Offer","itemOffered":{"@type":"Service","name":"롱폼·숏폼 영상 편집"}}]}}
+]}
+</script>
 <style>
   :root {
     --blue: #3182F6;
@@ -196,6 +228,13 @@
   .reveal.in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
+  /* 인사이트 내부링크 목록 */
+  .posts { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
+  .posts a { display: block; padding: 15px 16px; border: 1px solid var(--line); border-radius: 12px;
+    margin-bottom: 8px; text-decoration: none; color: var(--ink); font-weight: 700; font-size: 15px;
+    line-height: 1.5; background: var(--card); transition: border-color .15s; }
+  .posts a:active { border-color: var(--blue); }
+  .posts a::after { content: " →"; color: var(--blue); font-weight: 800; }
   .hint { font-size: 12.5px; color: var(--muted); margin: 6px 0 0; line-height: 1.5; }
   .yt-field { display: none; margin-top: 6px; padding: 14px 15px; background: var(--blue-tint); border: 1.5px solid var(--blue); border-radius: 12px; }
   .yt-field.show { display: block; animation: pop .25s ease; }
@@ -241,22 +280,22 @@
     <h1>네이버부터 숏폼까지,<br>마케팅 <span class="hl">한 곳에서</span> 끝내세요</h1>
     <!-- 실제 운영 채널 화면 슬라이드 (2026-08-14 대표님) -->
     <div class="shots" aria-hidden="true"><div class="track">
-      <div class="ph"><img src="/assets/shots/naver.jpg" alt=""><span>네이버</span></div>
-      <div class="ph"><img src="/assets/shots/tistory.jpg" alt=""><span>티스토리</span></div>
-      <div class="ph"><img src="/assets/shots/cafe.jpg" alt=""><span>카페</span></div>
-      <div class="ph"><img src="/assets/shots/threads.jpg" alt=""><span>스레드</span></div>
-      <div class="ph"><img src="/assets/shots/instagram.jpg" alt=""><span>인스타그램</span></div>
-      <div class="ph"><img src="/assets/shots/place.jpg" alt=""><span>플레이스</span></div>
-      <div class="ph"><img src="/assets/shots/website.jpg" alt=""><span>웹사이트</span></div>
-      <div class="ph"><img src="/assets/shots/youtube.jpg" alt=""><span>유튜브</span></div>
-      <div class="ph"><img src="/assets/shots/naver.jpg" alt=""><span>네이버</span></div>
-      <div class="ph"><img src="/assets/shots/tistory.jpg" alt=""><span>티스토리</span></div>
-      <div class="ph"><img src="/assets/shots/cafe.jpg" alt=""><span>카페</span></div>
-      <div class="ph"><img src="/assets/shots/threads.jpg" alt=""><span>스레드</span></div>
-      <div class="ph"><img src="/assets/shots/instagram.jpg" alt=""><span>인스타그램</span></div>
-      <div class="ph"><img src="/assets/shots/place.jpg" alt=""><span>플레이스</span></div>
-      <div class="ph"><img src="/assets/shots/website.jpg" alt=""><span>웹사이트</span></div>
-      <div class="ph"><img src="/assets/shots/youtube.jpg" alt=""><span>유튜브</span></div>
+      <div class="ph"><img src="/assets/shots/naver.jpg" alt="메가헤르츠 네이버 블로그·플레이스 운영 화면"><span>네이버</span></div>
+      <div class="ph"><img src="/assets/shots/tistory.jpg" alt="메가헤르츠 티스토리 SEO 블로그 운영 화면"><span>티스토리</span></div>
+      <div class="ph"><img src="/assets/shots/cafe.jpg" alt="메가헤르츠 네이버 카페 바이럴 운영 화면"><span>카페</span></div>
+      <div class="ph"><img src="/assets/shots/threads.jpg" alt="메가헤르츠 스레드 계정 운영 화면"><span>스레드</span></div>
+      <div class="ph"><img src="/assets/shots/instagram.jpg" alt="메가헤르츠 인스타그램 피드·릴스 운영 화면"><span>인스타그램</span></div>
+      <div class="ph"><img src="/assets/shots/place.jpg" alt="메가헤르츠 네이버 플레이스 관리 화면"><span>플레이스</span></div>
+      <div class="ph"><img src="/assets/shots/website.jpg" alt="메가헤르츠 홈페이지 제작 사례 화면"><span>웹사이트</span></div>
+      <div class="ph"><img src="/assets/shots/youtube.jpg" alt="메가헤르츠 유튜브·숏폼 채널 운영 화면"><span>유튜브</span></div>
+      <div class="ph"><img src="/assets/shots/naver.jpg" alt="메가헤르츠 네이버 블로그·플레이스 운영 화면"><span>네이버</span></div>
+      <div class="ph"><img src="/assets/shots/tistory.jpg" alt="메가헤르츠 티스토리 SEO 블로그 운영 화면"><span>티스토리</span></div>
+      <div class="ph"><img src="/assets/shots/cafe.jpg" alt="메가헤르츠 네이버 카페 바이럴 운영 화면"><span>카페</span></div>
+      <div class="ph"><img src="/assets/shots/threads.jpg" alt="메가헤르츠 스레드 계정 운영 화면"><span>스레드</span></div>
+      <div class="ph"><img src="/assets/shots/instagram.jpg" alt="메가헤르츠 인스타그램 피드·릴스 운영 화면"><span>인스타그램</span></div>
+      <div class="ph"><img src="/assets/shots/place.jpg" alt="메가헤르츠 네이버 플레이스 관리 화면"><span>플레이스</span></div>
+      <div class="ph"><img src="/assets/shots/website.jpg" alt="메가헤르츠 홈페이지 제작 사례 화면"><span>웹사이트</span></div>
+      <div class="ph"><img src="/assets/shots/youtube.jpg" alt="메가헤르츠 유튜브·숏폼 채널 운영 화면"><span>유튜브</span></div>
     </div></div>
     <p class="lead">
       블로그·플레이스·인스타·티스토리·카페·스레드·홈페이지,
@@ -372,6 +411,21 @@
       </div>
       <p class="eb-note"><span class="eb-price">각 정가 390,000원</span> → 지금 무료 공개 · 클릭하면 바로 열려요</p>
     </div>
+  </section>
+
+  <!-- 인사이트(내부링크) — SEO: 랜딩→블로그 크롤 경로 + 권위 전달 (2026-08-14) -->
+  <section class="pad reveal">
+    <p class="kicker">마케팅 인사이트</p>
+    <h2>맡기기 전에, 먼저 읽어보세요</h2>
+    <p class="lead">채널별로 무엇을 어떻게 해야 하는지 실무 기준으로 정리해 매일 올리고 있습니다.</p>
+    <div class="posts">
+      <a href="/blog/hospital-marketing.html">병원마케팅, 검색 상위노출부터 문의까지</a>
+      <a href="/blog/blog-marketing.html">블로그마케팅, 상위노출 원리부터 실행까지</a>
+      <a href="/blog/instagram-marketing.html">인스타마케팅, 노출부터 문의까지 잡는 법</a>
+      <a href="/blog/full-service-agency.html">종합광고대행사, 성과 내는 파트너 고르는 법</a>
+      <a href="/blog/youtube-shorts-ad.html">유튜브쇼츠광고, 예산 대비 전환 높이는 세팅법</a>
+    </div>
+    <a href="/blog/" class="btn ghost" style="margin-top:14px">인사이트 전체 보기</a>
   </section>
 
   <!-- FORM -->
