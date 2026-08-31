@@ -80,6 +80,20 @@
   .foot{margin-top:34px;text-align:center;font-size:12px;color:var(--muted);line-height:1.7;}
   .foot a{color:var(--blue);text-decoration:none;font-weight:700;}
   .logout{display:block;margin:22px auto 0;background:none;border:1px solid var(--line);color:var(--sub);font-size:13px;font-weight:700;padding:10px 18px;border-radius:10px;cursor:pointer;}
+  .tabs{display:flex;gap:6px;margin:18px 0 14px;background:#eef1f5;padding:4px;border-radius:12px}
+  .tabs button{flex:1;border:0;background:transparent;padding:10px 8px;border-radius:9px;
+    font-size:14px;font-weight:800;color:#8b95a1;cursor:pointer;font-family:inherit}
+  .tabs button.on{background:#fff;color:#191f28;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+  .tabs button .n{display:inline-block;margin-left:5px;font-size:12px;font-weight:700;
+    color:#8b95a1;background:#e5e8eb;border-radius:999px;padding:1px 7px}
+  .tabs button.on .n{background:#e8f3ff;color:#3182F6}
+  .lead{border-top:1px solid var(--line);padding:11px 0;display:block}
+  .lead:first-child{border-top:0}
+  .lead .lh{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .lead .prod{font-weight:800;font-size:14px}
+  .lead .tel{font-weight:700;font-size:14px;color:var(--brand,#3182F6);text-decoration:none}
+  .lead .day{font-size:12px;color:var(--muted);margin-left:auto}
+  .lead .dt{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -100,7 +114,7 @@
       <button class="btn" id="enter">현황 보기</button>
       <div id="err">등록된 상호를 찾지 못했습니다. 상호명을 다시 확인해 주세요.</div>
     </div>
-    <p class="hint">조회가 안 되시나요? 담당 매니저에게 문의하거나<br>카카오톡 <b>haebin1111</b> 로 연락 주세요.</p>
+    <p class="hint">조회가 안 되시나요? 담당 매니저에게 문의하거나<br><a href="https://open.kakao.com/o/sSWMIwKi" target="_blank" rel="noopener"><b>카카오톡 상담</b></a>으로 연락 주세요.</p>
   </div>
 
   <!-- 대시보드 -->
@@ -110,24 +124,48 @@
     <div class="cards">
       <div class="kpi accent"><div class="lab">전체 발행</div><b><span id="kTot">0</span><span class="u">건</span></b></div>
       <div class="kpi"><div class="lab">운영 채널</div><b><span id="kCh">0</span><span class="u">개</span></b></div>
+      <div class="kpi" id="kLeadCard" style="display:none"><div class="lab">상담 DB</div><b><span id="kLead">0</span><span class="u">건</span></b></div>
     </div>
-    <div class="sec">
+    <div class="tabs" id="tabs" style="display:none">
+      <button id="tabWork" class="on" onclick="showTab('work')">발행 현황<span class="n" id="nWork">0</span></button>
+      <button id="tabLead" onclick="showTab('lead')">상담 DB<span class="n" id="nLead">0</span></button>
+    </div>
+    <div class="sec" id="secWork">
       <div class="h">채널별 발행 현황 <span style="font-size:12px;font-weight:600;color:var(--muted)">· 눌러서 링크 확인</span></div>
       <div id="chanList"></div>
     </div>
+    <div class="sec" id="secLead" style="display:none">
+      <div class="h">들어온 상담 DB <span style="font-size:12px;font-weight:600;color:var(--muted)" id="leadLabel"></span></div>
+      <div id="leadList"></div>
+    </div>
     <button class="logout" id="logout">다른 업체 보기</button>
-    <div class="foot">궁금한 점은 담당 매니저 또는 카카오톡 <a href="https://open.kakao.com/o/sbhh0eIi" target="_blank" rel="noopener">haebin1111</a> 로 문의 주세요.</div>
+    <div class="foot">궁금한 점은 담당 매니저 또는 <a href="https://open.kakao.com/o/sSWMIwKi" target="_blank" rel="noopener">카카오톡 상담</a>으로 문의 주세요.</div>
   </div>
 </div>
 
 <script>
-  var WEBAPP = "https://script.google.com/macros/s/AKfycbxH2U6a8Fyu-kfYHX2SQqJBK5g7b8KSkI1Qpd6ofOWaf3LKEjFC71MtpXRD-X3Qknlrzg/exec";
+  var WEBAPP = "https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec";
   var chanClass = {"네이버":"c-naver","네이버블로그":"c-nblog","블로그":"c-nblog","네이버지식인":"c-kin","지식인":"c-kin","플레이스":"c-place","인스타그램":"c-insta","인스타":"c-insta","티스토리":"c-tstory","홈페이지":"c-web","웹사이트":"c-web","네이버카페":"c-cafe","카페":"c-cafe","스레드":"c-threads","영상":"c-video","숏폼":"c-video"};
   var chanMark = {"네이버":"N","네이버블로그":"N","블로그":"N","네이버지식인":"K","지식인":"K","플레이스":"P","인스타그램":"◎","인스타":"◎","티스토리":"T","홈페이지":"</>","웹사이트":"</>","네이버카페":"C","카페":"C","스레드":"@","영상":"▶","숏폼":"▶"};
   var _cb = 0;
 
   function el(id){return document.getElementById(id);}
   function esc(s){return String(s||"").replace(/[<>&"]/g,function(c){return{"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c];});}
+
+  // 탭 전환. 선택한 탭은 주소에 남겨서 새로고침해도 그대로 열린다.
+  function showTab(which){
+    var lead = (which === "lead");
+    el("secWork").style.display = lead ? "none" : "block";
+    el("secLead").style.display = lead ? "block" : "none";
+    el("tabWork").className = lead ? "" : "on";
+    el("tabLead").className = lead ? "on" : "";
+    try{
+      var u = new URL(location.href);
+      u.searchParams.set("t", which);
+      history.replaceState(null, "", u.search);
+    }catch(e){}
+  }
+  window.showTab = showTab;
 
   function render(d){
     el("enter").disabled=false; el("enter").textContent="현황 보기";
@@ -138,6 +176,31 @@
     el("statusText").textContent=s.status||"정상 운영 중";
     el("kTot").textContent=s.total||0;
     el("kCh").textContent=s.channelCount||0;
+
+    // 장기렌트·보험 상담 DB (2번 랩탑 → 상담원 DB 탭 → 여기)
+    var leads=d.leads||[];
+    if(leads.length){
+      el("kLead").textContent=leads.length;
+      el("leadLabel").textContent = d.leadLabel ? ("· " + d.leadLabel) : "";
+      el("kLeadCard").style.display="";
+      el("leadList").innerHTML=leads.map(function(L){
+        var tel=String(L.phone||"").replace(/[^0-9+]/g,"");
+        return '<div class="lead"><div class="lh">'+
+          '<span class="prod">'+esc(L.product)+'</span>'+
+          (tel?'<a class="tel" href="tel:'+esc(tel)+'">'+esc(L.phone)+'</a>':'')+
+          '<span class="day">'+esc(L.date)+'</span></div>'+
+          (L.detail?'<div class="dt">'+esc(L.detail)+'</div>':'')+
+          '</div>';
+      }).join("");
+    } else {
+      el("kLeadCard").style.display="none";
+    }
+    if(!leads.length){
+      el("leadList").innerHTML='<div class="lead" style="color:var(--muted);font-weight:600">아직 들어온 상담이 없습니다</div>';
+    }
+    el("nLead").textContent = leads.length;
+    el("tabs").style.display = "flex";
+    el("nWork").textContent = s.total || 0;
     var list=el("chanList"); list.innerHTML="";
     var chans=d.channels||[];
     if(!chans.length){ list.innerHTML='<div class="chan"><div class="chan-h"><div class="nm" style="color:var(--muted);font-weight:600">아직 등록된 발행 내역이 없습니다.</div></div></div>'; }
@@ -162,6 +225,9 @@
         '<div class="posts">'+posts+'</div></div>');
     });
     el("login").style.display="none"; el("dash").style.display="block";
+    var want = "work";
+    try{ want = new URLSearchParams(location.search).get("t") || "work"; }catch(e){}
+    showTab(want === "lead" ? "lead" : "work");
     try{ history.replaceState(null,"","?c="+encodeURIComponent(el("code").value.trim())); }catch(e){}
     window.scrollTo(0,0);
   }
