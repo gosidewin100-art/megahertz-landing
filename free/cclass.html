@@ -56,6 +56,7 @@ footer a{color:rgba(255,255,255,.8)}
 .cta-main{display:block;text-align:center;background:linear-gradient(150deg,#0064FF,#3182F6);color:#fff!important;font-weight:800;font-size:19px;padding:18px 20px;border-radius:14px;text-decoration:none;box-shadow:0 10px 30px rgba(0,100,255,.35);margin:26px 0 12px}
 .cta-sub{text-align:center;color:#4E5968;font-size:14.5px;margin:0 0 6px}
 .cta-sub code{background:#F2F4F6;border-radius:6px;padding:2px 7px;font-weight:800;color:#0057E0}
+.cta-email{display:block;text-align:center;background:#fff;color:#0057E0!important;font-weight:700;font-size:15.5px;padding:13px 20px;border-radius:12px;text-decoration:none;border:1.5px solid #CFE0FF;margin:0 0 14px}
 .small{color:#8B95A1;font-size:12.5px;margin:6px 0 0}
 .sticky{position:sticky;bottom:12px;z-index:6;margin-top:30px}
 @media(min-width:640px){.bene{grid-template-columns:1fr 1fr}}
@@ -74,6 +75,7 @@ footer a{color:rgba(255,255,255,.8)}
 <div class="wrap"><div class="card-body">
   <div class="day1"><h2>방에 들어오면 첫날 받는 것</h2><ol><li><b>강의 입장 링크</b> — 결제창·자동결제 없이 바로 열립니다</li><li><b>내 상황에 맞는 시작 순서 1장</b> — 처음이면 '개설 → 애드포스트 승인 → 첫 글', 이미 하고 있으면 막힌 자리부터</li><li><b>쿠폰 add10</b> — 이어가기로 하실 때만 쓰는 유료 강의 30% 할인</li></ol></div>
   <a class="cta-main" href="https://pf.kakao.com/_xkWxorX/chat" data-cta="main" rel="noopener">카카오톡 채널에서 1:1 채팅으로 링크 받기</a>
+  <a class="cta-email" href="mailto:gosidewin@naver.com?subject=cclass%20%EC%8B%A0%EC%B2%AD" data-role="cta-email" data-cta="email" rel="noopener">이메일로 받기 (카카오톡 안 쓰셔도 됩니다)</a>
   <p class="cta-sub">메일이 편하시면 받으신 메일에 <code>1</code> 만 답장해 주세요 — 링크와 쿠폰을 회신으로 보내드립니다.</p>
   <p class="small">카카오톡 채널 MHZ 와의 1:1 채팅입니다. 물어만 보고 나가셔도 됩니다. 결제 얘기는 먼저 꺼내지 않습니다.</p>
   <h2>어떤 점이 달라지나</h2>
@@ -87,9 +89,14 @@ footer a{color:rgba(255,255,255,.8)}
 </div>
 <script>
 (function(){
-  var q=new URLSearchParams(location.search), e=(q.get('e')||'anon').toLowerCase();
-  function ping(t){ try{ var i=new Image(); i.src='https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec?o=1&e='+encodeURIComponent(e)+'&t='+t+'&_='+Date.now(); }catch(err){} }
+  var q=new URLSearchParams(location.search), e=q.get('e');
+  var eid=(e||'anon').toLowerCase();
+  function ping(t){ try{ var i=new Image(); i.src='https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec?o=1&e='+encodeURIComponent(eid)+'&t='+t+'&_='+Date.now(); }catch(err){} }
   ping('lp_cclass');
+  if(e){
+    var url='https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec?r=selfcheck&e='+encodeURIComponent(e)+'&seg=cclass';
+    document.querySelectorAll('[data-role="cta-email"]').forEach(function(a){ a.href=url; });
+  }
   document.querySelectorAll('a[data-cta]').forEach(function(a){
     a.addEventListener('click',function(){ ping('cta_cclass_'+a.getAttribute('data-cta')); });
   });
