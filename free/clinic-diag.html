@@ -80,21 +80,9 @@ footer{font-size:11.5px;color:var(--muted);line-height:1.75;padding:6px 4px 0}
   function ping(t){ try{ var i=new Image(); i.src='https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec?o=1&e='+encodeURIComponent(eid)+'&t='+t+'&_='+Date.now(); }catch(err){} }
   ping('lp_'+seg);
   document.querySelectorAll('a[data-cta]').forEach(function(a){ a.addEventListener('click',function(){ ping('cta_'+seg+'_'+a.getAttribute('data-cta')); }); });
-  var f=document.getElementById('f'), msg=document.getElementById('msg'), btn=document.getElementById('btn');
-  function v(id){ var x=document.getElementById(id); return x?x.value.trim():''; }
-  f.addEventListener('submit',function(ev){
-    ev.preventDefault(); msg.className='msg';
-    var miss=[].slice.call(f.querySelectorAll('[required]')).filter(function(x){return !x.value.trim();});
-    if(miss.length){ msg.textContent='필수 항목을 채워 주세요.'; msg.className='msg err'; miss[0].focus(); return; }
-    if(v('email').indexOf('@')<1){ msg.textContent='이메일 주소를 확인해 주세요.'; msg.className='msg err'; return; }
-    if(!document.getElementById('agree').checked){ msg.textContent='개인정보 수집·이용에 동의해 주셔야 신청할 수 있습니다.'; msg.className='msg err'; return; }
-    btn.disabled=true; btn.textContent='보내는 중...';
-    var body={kind:'offer_form',track:'clinic',seg:seg,biz:v('biz'),email:v('email'),phone:v('phone'),links:v('links'),note:v('note'),agree:true};
-    fetch('https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)})
-      .then(function(){ ping('submit_'+seg); f.querySelectorAll('input,textarea').forEach(function(x){x.disabled=true;}); btn.textContent='신청 완료'; msg.textContent='신청이 접수됐습니다. 적어 주신 이메일로 진단 결과를 보내드립니다.'; msg.className='msg ok'; })
-      .catch(function(){ btn.disabled=false; btn.textContent='무료 진단 신청하기'; msg.textContent='전송이 안 됐습니다. 잠시 후 다시 눌러 주시거나 받으신 메일에 회신해 주세요.'; msg.className='msg err'; });
-  });
+  window.OFFER_CFG={webapp:'https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec',track:'clinic',seg:seg,submit:'무료 진단 신청하기',done:'신청이 접수됐습니다. 적어 주신 이메일로 진단 결과를 보내드립니다.',kakao:'https://open.kakao.com/o/sSWMIwKi',ping:ping};
 })();
 </script>
+<script src="/free/offer-form.js?v=20261007"></script>
 </body>
 </html>
