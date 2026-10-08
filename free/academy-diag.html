@@ -68,9 +68,9 @@ footer{font-size:11.5px;color:var(--muted);line-height:1.75;padding:6px 4px 0}
     <label class="agree"><input type="checkbox" id="agree"> 위 개인정보 수집·이용에 동의합니다 (필수)</label>
     <button type="submit" id="btn">무료 진단서 신청하기</button>
     <div class="msg" id="msg"></div>
-    <p class="small">카톡이 편하시면 <a href="https://open.kakao.com/o/sSWMIwKi" data-cta="kakao" rel="noopener">1:1카톡무료상담</a>으로 남겨 주셔도 됩니다.</p>
+    <p class="small">카톡이 편하시면 <a href="https://open.kakao.com/o/s4E9FpRi" data-cta="kakao" rel="noopener">종합마케팅 상담 오픈채팅</a>으로 남겨 주셔도 됩니다.</p>
   </form>
-  <footer>문의: 받으신 메일에 회신 또는 1:1카톡무료상담 https://open.kakao.com/o/sSWMIwKi<br>수신거부: 메일을 더 받고 싶지 않으시면 받으신 메일에 '수신거부'라고 회신 주시면 즉시 중단합니다.</footer>
+  <footer>문의: 받으신 메일에 회신 또는 종합마케팅 상담 오픈채팅 https://open.kakao.com/o/s4E9FpRi<br>수신거부: 메일을 더 받고 싶지 않으시면 받으신 메일에 '수신거부'라고 회신 주시면 즉시 중단합니다.</footer>
 </div>
 <script>
 (function(){
@@ -80,9 +80,10 @@ footer{font-size:11.5px;color:var(--muted);line-height:1.75;padding:6px 4px 0}
   function ping(t){ try{ var i=new Image(); i.src='https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec?o=1&e='+encodeURIComponent(eid)+'&t='+t+'&_='+Date.now(); }catch(err){} }
   ping('lp_'+seg);
   document.querySelectorAll('a[data-cta]').forEach(function(a){ a.addEventListener('click',function(){ ping('cta_'+seg+'_'+a.getAttribute('data-cta')); }); });
-  window.OFFER_CFG={webapp:'https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec',track:'academy',seg:seg,submit:'무료 진단서 신청하기',done:'신청이 접수됐습니다. 적어 주신 이메일로 진단서를 보내드립니다.',kakao:'https://open.kakao.com/o/sSWMIwKi',ping:ping};
+  window.OFFER_CFG={webapp:'https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec',track:'academy',seg:seg,submit:'무료 진단서 신청하기',done:'신청이 접수됐습니다. 적어 주신 이메일로 진단서를 보내드립니다.',kakao:'https://open.kakao.com/o/s4E9FpRi',ping:ping};
 })();
 </script>
 <script src="/free/offer-form.js?v=20261007"></script>
+<script>/*oc-rot-20261008*/(function(){var L=["https://open.kakao.com/o/s109EpRi", "https://open.kakao.com/o/smPqFpRi", "https://open.kakao.com/o/sW2zFpRi", "https://open.kakao.com/o/sSjWFpRi", "https://open.kakao.com/o/s4E9FpRi"];var e='';try{e=(new URLSearchParams(location.search).get('e')||'').trim().toLowerCase();}catch(x){}var k=e?(function(s){var h=0;for(var i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))%1000003;}return h%L.length;})(e):Math.floor(Math.random()*L.length);var n=L[k];document.querySelectorAll('a[href*="open.kakao.com/o/"]').forEach(function(a){var o=a.getAttribute('href');if(L.indexOf(o)<0)return;a.setAttribute('href',n);if(a.textContent.indexOf(o)>=0)a.textContent=a.textContent.split(o).join(n);});if(window.OFFER_CFG)window.OFFER_CFG.kakao=n;})();</script>
 </body>
 </html>

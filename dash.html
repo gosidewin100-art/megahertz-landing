@@ -114,7 +114,7 @@
       <button class="btn" id="enter">현황 보기</button>
       <div id="err">등록된 상호를 찾지 못했습니다. 상호명을 다시 확인해 주세요.</div>
     </div>
-    <p class="hint">조회가 안 되시나요? 담당 매니저에게 문의하거나<br><a href="https://open.kakao.com/o/sSWMIwKi" target="_blank" rel="noopener"><b>카카오톡 상담</b></a>으로 연락 주세요.</p>
+    <p class="hint">조회가 안 되시나요? 담당 매니저에게 문의하거나<br><a href="https://open.kakao.com/o/smPqFpRi" target="_blank" rel="noopener"><b>카카오톡 상담</b></a>으로 연락 주세요.</p>
   </div>
 
   <!-- 대시보드 -->
@@ -139,7 +139,7 @@
       <div id="leadList"></div>
     </div>
     <button class="logout" id="logout">다른 업체 보기</button>
-    <div class="foot">궁금한 점은 담당 매니저 또는 <a href="https://open.kakao.com/o/sSWMIwKi" target="_blank" rel="noopener">카카오톡 상담</a>으로 문의 주세요.</div>
+    <div class="foot">궁금한 점은 담당 매니저 또는 <a href="https://open.kakao.com/o/smPqFpRi" target="_blank" rel="noopener">카카오톡 상담</a>으로 문의 주세요.</div>
   </div>
 </div>
 
@@ -252,5 +252,6 @@
   // URL에 ?c=코드 있으면 자동 로그인
   (function(){ try{ var c=new URLSearchParams(location.search).get("c"); if(c){ el("code").value=c; load(c.trim()); } }catch(e){} })();
 </script>
+<script>/*oc-rot-20261008*/(function(){var L=["https://open.kakao.com/o/s109EpRi", "https://open.kakao.com/o/smPqFpRi", "https://open.kakao.com/o/sW2zFpRi", "https://open.kakao.com/o/sSjWFpRi", "https://open.kakao.com/o/s4E9FpRi"];var e='';try{e=(new URLSearchParams(location.search).get('e')||'').trim().toLowerCase();}catch(x){}var k=e?(function(s){var h=0;for(var i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))%1000003;}return h%L.length;})(e):Math.floor(Math.random()*L.length);var n=L[k];document.querySelectorAll('a[href*="open.kakao.com/o/"]').forEach(function(a){var o=a.getAttribute('href');if(L.indexOf(o)<0)return;a.setAttribute('href',n);if(a.textContent.indexOf(o)>=0)a.textContent=a.textContent.split(o).join(n);});if(window.OFFER_CFG)window.OFFER_CFG.kakao=n;})();</script>
 </body>
 </html>
