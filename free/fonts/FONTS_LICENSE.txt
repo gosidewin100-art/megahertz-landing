@@ -1,0 +1,23 @@
+이 폴더의 웹폰트 라이선스 (모두 SIL Open Font License 1.1 - 상업적 이용, 웹 임베딩, 재배포 허용 / 폰트 파일 단독 판매만 금지)
+라이선스 전문: https://openfontlicense.org/open-font-license-official-text/
+
+1) Pretendard (본문·입력창·버튼, 두 페이지 공통)
+   파일: Pretendard-Regular.subset.woff2 (400), Pretendard-Bold.subset.woff2 (700)
+   라이선스: SIL OFL 1.1, Copyright (c) 2021, Kil Hyung-jin, Reserved Font Name "Pretendard"
+   출처: https://github.com/orioncactus/pretendard (v1.3.9)
+         https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2-subset/
+   비고: 제작자가 배포하는 공식 서브셋 woff2 를 수정 없이 그대로 사용 (Reserved Font Name 조항 때문에 직접 가공하지 않음).
+         공식 서브셋에 KS X 1001 한글 2,350자 + 영문·숫자·기호 모두 포함됨을 fonttools 로 확인.
+
+2) Gowun Batang / 고운바탕 Bold (channel-diag-biz.html 제목용)
+   파일: GowunBatang-Bold.ks.woff2
+   라이선스: SIL OFL 1.1, Copyright 2021 The Gowun Batang Project Authors (Reserved Font Name 없음)
+   출처: https://github.com/google/fonts/tree/main/ofl/gowunbatang  (https://github.com/yangheeryu/Gowun-Batang)
+   가공: fonttools 로 KS X 1001 한글 2,350자 + ASCII + 페이지 사용 기호만 남겨 woff2 로 변환
+
+3) Noto Serif KR SemiBold(600) (channel-diag-pro.html 제목용)
+   파일: NotoSerifKR-SemiBold.ks.woff2
+   라이선스: SIL OFL 1.1, Copyright 2012 Google Inc. (Reserved Font Name 없음)
+   출처: https://github.com/google/fonts/tree/main/ofl/notoserifkr  (NotoSerifKR[wght].ttf)
+   가공: fonttools 로 가변폰트를 600 굵기 하나로 고정한 뒤, 위와 같은 범위로 서브셋해 woff2 로 변환
+         (페이지에서는 설치된 Noto Serif KR 과 섞이지 않도록 'Noto Serif KR Sub' 이름으로 선언)
