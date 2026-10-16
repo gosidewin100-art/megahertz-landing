@@ -507,6 +507,18 @@
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
   // 폼 제출 → Apps Script(호스팅 시 실제 수집). 실패 시 카톡 안내.
+  /*src-track-20261016*/
+  var MHZ_SRC = (function(){
+    var k = 'mhz_src_v1', v = null;
+    try { v = JSON.parse(localStorage.getItem(k) || 'null'); } catch(e) {}
+    var ref = document.referrer || '';
+    var ext = ref && ref.indexOf(location.hostname) < 0;
+    if (!v || ext || location.search.indexOf('utm_') >= 0) {
+      v = { r: ref ? ref.split('?')[0].slice(0,120) : '직접', q: (location.search||'').slice(0,120), p: location.pathname, t: new Date().toISOString().slice(0,10) };
+      try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {}
+    }
+    return v;
+  })();
   var WEBAPP = "https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec";
   var f = document.getElementById('leadform');
 
@@ -537,7 +549,7 @@
     var payload = {
       name: f.name.value,
       contact: f.contact.value,
-      note: '[통합대행 상세페이지] 업종:' + (f.industry.value||'-') + ' / 관심채널:' + (chans||'-') + links + ' / 메모:' + (f.note.value||'-'),
+      note: '[통합대행 상세페이지] 업종:' + (f.industry.value||'-') + ' / 관심채널:' + (chans||'-') + links + ' / 메모:' + (f.note.value||'-') + ' / 유입:' + MHZ_SRC.r + (MHZ_SRC.q ? ' ' + MHZ_SRC.q : '') + ' (첫방문 ' + MHZ_SRC.t + ', 들어온 쪽 ' + MHZ_SRC.p + ')',
       seg: 'landing_agency'
     };
     btn.disabled = true; btn.textContent = '접수 중...';
