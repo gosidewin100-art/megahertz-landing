@@ -165,6 +165,19 @@
   .nl-optin { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0 0; font-size: 13.5px; font-weight: 700; line-height: 1.55; color: var(--ink); cursor: pointer; }
   .nl-optin input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; padding: 0; border-radius: 4px; accent-color: var(--blue); }
   .nl-note { font-size: 12px; color: var(--muted); margin: 6px 0 0 30px; line-height: 1.6; }
+  /* pi-consent-20261021 개인정보 수집·이용 동의(필수) */
+  .pi-consent { margin: 22px 0 0; padding: 14px 14px 12px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--section); }
+  .pi-consent.err { border-color: #F04452; }
+  .pi-row { display: flex; gap: 10px; align-items: flex-start; justify-content: space-between; }
+  .pi-agree { display: flex; gap: 10px; align-items: flex-start; margin: 0; font-size: 14px; font-weight: 800; line-height: 1.5; color: var(--ink); cursor: pointer; }
+  .pi-agree input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; padding: 0; border-radius: 4px; accent-color: var(--blue); }
+  .pi-agree .pi-req { color: var(--blue); }
+  .pi-more { flex: none; width: auto; margin: 0; padding: 2px 4px; min-height: 28px; background: none; border: 0; color: var(--sub); font: inherit; font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .pi-detail { margin: 10px 0 0 30px; font-size: 12.5px; line-height: 1.65; color: var(--sub); }
+  .pi-detail p { margin: 0 0 4px; }
+  .pi-detail b { color: var(--ink); }
+  .pi-msg { display: none; margin: 8px 0 0 30px; font-size: 13px; font-weight: 700; color: #F04452; }
+  .pi-consent.err .pi-msg { display: block; }
   .privacy { font-size: 12px; color: var(--muted); text-align: center; margin: 14px 0 0; line-height: 1.6; }
   .form-done { display: none; text-align: center; padding: 30px 6px; }
   .form-done .big { width: 60px; height: 60px; border-radius: 50%; background: var(--blue-tint); color: var(--blue-deep); font-size: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
@@ -385,10 +398,23 @@
         </div>
         <label>남기실 말씀 <span style="color:var(--muted);font-weight:500">(선택)</span></label>
         <textarea name="note" rows="2" placeholder="현재 고민이나 궁금한 점을 적어주세요."></textarea>
+        <div class="pi-consent" id="piBox">
+          <div class="pi-row">
+            <label class="pi-agree"><input type="checkbox" name="piAgree" id="piAgree" value="1" aria-describedby="piMsg"><span><span class="pi-req">[필수]</span> 개인정보 수집·이용에 동의합니다</span></label>
+            <button type="button" class="pi-more" id="piMore" aria-expanded="false" aria-controls="piDetail">자세히</button>
+          </div>
+          <div class="pi-detail" id="piDetail" hidden>
+            <p><b>수집 항목</b>: 성함 또는 상호, 연락처(전화번호·카카오톡 ID·이메일 중 남기신 것), 업종, 관심 있는 채널, 고르신 채널의 링크(유튜브·인스타그램·홈페이지·스레드), 남기실 말씀. 신청할 때 들어오신 경로(직전 페이지 주소, 첫 방문일, 처음 연 페이지)도 함께 저장됩니다.</p>
+            <p><b>수집·이용 목적</b>: 무료 진단 상담과 견적 회신</p>
+            <p><b>보유 기간</b>: 상담 종료 후 1년. 요청하시면 바로 파기합니다.</p>
+            <p><b>동의 거부</b>: 동의하지 않으실 수 있습니다. 동의하지 않으시면 이 양식으로 상담 신청을 하실 수 없습니다.</p>
+          </div>
+          <p class="pi-msg" id="piMsg" role="alert">개인정보 수집·이용에 동의해 주셔야 상담 신청이 접수됩니다.</p>
+        </div>
         <label class="nl-optin"><input type="checkbox" name="optin" id="nlOptin" value="1"><span>원장님·대표님·사장님 업종별 무료 마케팅 자료 받기 (선택, 월 1~2회 마케팅 사례·소식 메일 포함, 언제든 수신 거부)<span class="nl-value"></span></span></label>
         <p class="nl-note">체크하시면 업종별 무료 마케팅 자료와 마케팅 사례·소식 메일(광고성 정보)을 이메일로 받는 데 동의하시는 것입니다. 보내는 내용은 같은 업종에서 실제로 진행한 사례와 바로 써볼 수 있는 점검 자료입니다. 체크하지 않아도 신청은 그대로 접수되고, 메일마다 있는 수신 거부 링크로 언제든 그만 받으실 수 있습니다.</p>
         <button type="submit" class="btn" id="submitBtn">무료 진단 신청하기</button>
-        <p class="privacy">제출 시 상담 목적의 연락에 동의하는 것으로 간주됩니다.<br>남겨주신 정보는 상담 외 용도로 사용되지 않습니다.</p>
+        <p class="privacy">남겨주신 정보는 상담과 견적 회신에만 사용합니다.</p>
       </form>
       <div class="form-done" id="formDone">
         <div class="big">✓</div>
@@ -451,8 +477,24 @@
     });
   });
 
+  // pi-consent-20261021: 개인정보 수집·이용 동의(필수). 문구를 바꾸면 PI_VER 와 Apps Script PI_VERSION 을 같이 올린다.
+  var PI_VER = 'p1_20261021';
+  var piBox = document.getElementById('piBox'), piAgree = document.getElementById('piAgree');
+  var piMore = document.getElementById('piMore'), piDetail = document.getElementById('piDetail');
+  piMore.addEventListener('click', function(){
+    var open = piDetail.hidden; piDetail.hidden = !open;
+    piMore.setAttribute('aria-expanded', open ? 'true' : 'false'); piMore.textContent = open ? '접기' : '자세히';
+  });
+  piAgree.addEventListener('change', function(){ if (piAgree.checked) piBox.classList.remove('err'); });
+
   f.addEventListener('submit', function(ev){
     ev.preventDefault();
+    if (!piAgree.checked) {
+      piBox.classList.add('err');
+      piBox.scrollIntoView({behavior:'smooth', block:'center'});
+      piAgree.focus({preventScroll:true});
+      return;
+    }
     var btn = document.getElementById('submitBtn');
     var chans = Array.from(f.querySelectorAll('.chan-opt input:checked')).map(function(c){return c.value;}).join(', ');
     var links = CHAN_FIELDS.map(function(c){
@@ -464,7 +506,8 @@
       contact: f.contact.value,
       note: '[통합대행 상세페이지] 업종:' + (f.industry.value||'-') + ' / 관심채널:' + (chans||'-') + links + ' / 메모:' + (f.note.value||'-') + ' / 유입:' + MHZ_SRC.r + (MHZ_SRC.q ? ' ' + MHZ_SRC.q : '') + ' (첫방문 ' + MHZ_SRC.t + ', 들어온 쪽 ' + MHZ_SRC.p + ')',
       seg: 'landing_agency',
-      optin: !!(f.optin && f.optin.checked)
+      optin: !!(f.optin && f.optin.checked),
+      privacy: piAgree.checked, privacyVer: PI_VER
     };
     btn.disabled = true; btn.textContent = '접수 중...';
     fetch(WEBAPP, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(payload) })
