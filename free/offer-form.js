@@ -69,7 +69,8 @@
     if (!document.getElementById('agree').checked) { show('개인정보 수집·이용에 동의해 주셔야 신청할 수 있습니다.', 'err'); return; }
     btn.disabled = true; btn.textContent = '보내는 중...';
     var body = { kind: 'offer_form', track: C.track, seg: C.seg, biz: v('biz'), email: v('email'), phone: v('phone'),
-                 links: v('links'), note: v('note') + (C.extra ? C.extra() : ''), agree: true, test: TEST };
+                 links: v('links'), note: v('note') + (C.extra ? C.extra() : ''), agree: true, test: TEST,
+                 optin: !!(document.getElementById('optin') && document.getElementById('optin').checked) };  /* nl-optin-20261021 */
     send(body, SIMFAIL).then(function (j) {
       C.ping('submit_' + C.seg);
       f.querySelectorAll('input,textarea').forEach(function (x) { x.disabled = true; });

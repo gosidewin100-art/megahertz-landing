@@ -204,6 +204,10 @@
     background: var(--section); border: 1.5px solid var(--line); padding: 0 14px; border-radius: 10px; cursor: pointer; transition: all .12s; line-height: 1; }
   .chan-opt input:checked + span { background: var(--blue-tint); border-color: var(--blue); color: var(--blue-deep); }
   .form-card .btn { margin-top: 24px; }
+  /* nl-optin-20261021 소식 메일 수신동의(선택) */
+  .nl-optin { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0 0; font-size: 13.5px; font-weight: 700; line-height: 1.55; color: var(--ink); cursor: pointer; }
+  .nl-optin input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; padding: 0; border-radius: 4px; accent-color: var(--blue); }
+  .nl-note { font-size: 12px; color: var(--muted); margin: 6px 0 0 30px; line-height: 1.6; }
   .privacy { font-size: 12px; color: var(--muted); text-align: center; margin: 14px 0 0; line-height: 1.6; }
   .form-done { display: none; text-align: center; padding: 30px 6px; }
   .form-done .big { width: 60px; height: 60px; border-radius: 50%; background: var(--blue-tint); color: var(--blue-deep); font-size: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
@@ -473,6 +477,8 @@
         </div>
         <label>남기실 말씀 <span style="color:var(--muted);font-weight:500">(선택)</span></label>
         <textarea name="note" rows="2" placeholder="현재 고민이나 궁금한 점을 적어주세요."></textarea>
+        <label class="nl-optin"><input type="checkbox" name="optin" id="nlOptin" value="1"><span>원장님·대표님·사장님 업종별 무료 마케팅 자료 받기 (선택, 월 1~2회 마케팅 사례·소식 메일 포함, 언제든 수신 거부)<span class="nl-value"></span></span></label>
+        <p class="nl-note">체크하시면 업종별 무료 마케팅 자료와 마케팅 사례·소식 메일(광고성 정보)을 이메일로 받는 데 동의하시는 것입니다. 보내는 내용은 같은 업종에서 실제로 진행한 사례와 바로 써볼 수 있는 점검 자료입니다. 체크하지 않아도 신청은 그대로 접수되고, 메일마다 있는 수신 거부 링크로 언제든 그만 받으실 수 있습니다.</p>
         <button type="submit" class="btn" id="submitBtn">무료 진단 신청하기</button>
         <p class="privacy">제출 시 상담 목적의 연락에 동의하는 것으로 간주됩니다.<br>남겨주신 정보는 상담 외 용도로 사용되지 않습니다.</p>
       </form>
@@ -549,7 +555,8 @@
       name: f.name.value,
       contact: f.contact.value,
       note: '[통합대행 상세페이지] 업종:' + (f.industry.value||'-') + ' / 관심채널:' + (chans||'-') + links + ' / 메모:' + (f.note.value||'-') + ' / 유입:' + MHZ_SRC.r + (MHZ_SRC.q ? ' ' + MHZ_SRC.q : '') + ' (첫방문 ' + MHZ_SRC.t + ', 들어온 쪽 ' + MHZ_SRC.p + ')',
-      seg: 'landing_agency'
+      seg: 'landing_agency',
+      optin: !!(f.optin && f.optin.checked)
     };
     btn.disabled = true; btn.textContent = '접수 중...';
     fetch(WEBAPP, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(payload) })
@@ -566,5 +573,6 @@
   });
 </script>
 <script>/*oc-rot-20261008*/(function(){var L=["https://open.kakao.com/o/s109EpRi", "https://open.kakao.com/o/smPqFpRi", "https://open.kakao.com/o/sW2zFpRi", "https://open.kakao.com/o/sSjWFpRi", "https://open.kakao.com/o/s4E9FpRi"];var e='';try{e=(new URLSearchParams(location.search).get('e')||'').trim().toLowerCase();}catch(x){}var k=e?(function(s){var h=0;for(var i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))%1000003;}return h%L.length;})(e):Math.floor(Math.random()*L.length);var n=L[k];document.querySelectorAll('a[href*="open.kakao.com/o/"]').forEach(function(a){var o=a.getAttribute('href');if(L.indexOf(o)<0)return;a.setAttribute('href',n);if(a.textContent.indexOf(o)>=0)a.textContent=a.textContent.split(o).join(n);});if(window.OFFER_CFG)window.OFFER_CFG.kakao=n;})();</script>
+<script src="/assets/nl-optin.js?v=20261021"></script>
 </body>
 </html>
