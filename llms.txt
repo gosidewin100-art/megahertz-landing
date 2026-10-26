@@ -37,6 +37,10 @@
 - [숏폼 제작 대행, 롱폼·숏폼 영상편집 완성본 납품](https://megahertz.co.kr/channels/video.html)
 
 ## 최근 칼럼
+- [숏폼 제작 업체, 견적 전에 점검할 기준과 질문 순서](https://megahertz.co.kr/blog/short-form-agency-checklist.html)
+- [병원 유튜브 마케팅, 맡기기 전 비용이 정해지는 5가지 기준](https://megahertz.co.kr/blog/hospital-youtube-cost.html)
+- [블로그 대행 비용, 건당 단가로 계산하는 3단계 순서](https://megahertz.co.kr/blog/blog-agency-cost-35.html)
+- [요양원 광고, 비용 구조와 맡기기 전 확인 기준 5가지](https://megahertz.co.kr/blog/nursing-home-ad-cost.html)
 - [식당 인스타 마케팅 대행, 메뉴판·원산지 확인을 놓치지 않는 순서](https://megahertz.co.kr/blog/restaurant-instagram-marketing-agency-pr.html)
 - [식당 블로그 마케팅 대행사, 원산지 표기와 작업 범위를 미리 맞추는 법](https://megahertz.co.kr/blog/restaurant-blog-marketing-agency-questio.html)
 - [인테리어 플레이스 마케팅 대행사, 계약 전 등록 여부와 사진 공개 범위 확인법](https://megahertz.co.kr/blog/interior-place-marketing-agency-question.html)
@@ -73,11 +77,7 @@
 - [인테리어 블로그 마케팅 비용, 견적서에서 먼저 볼 항목 정리](https://megahertz.co.kr/blog/interior-blog-marketing-cost-guide.html)
 - [변호사 블로그 마케팅 비용, 광고 규정 검수까지 견적서에서 따져보는 법](https://megahertz.co.kr/blog/lawyer-blog-marketing-cost.html)
 - [병원 블로그 마케팅 비용, 견적서에서 먼저 확인할 항목과 검수 범위](https://megahertz.co.kr/blog/hospital-blog-marketing-cost.html)
-- [인스타 관리 대행, 맡기기 전 점검 기준과 비용 구조 질문](https://megahertz.co.kr/blog/instagram-management-agency-checklist.html)
-- [플레이스 마케팅, 첫 상담부터 월 점검까지 진행 순서와 비용 구조](https://megahertz.co.kr/blog/place-marketing-process-cost.html)
-- [블로그 마케팅 대행사, 비용이 정해지는 구조와 계약 전 질문](https://megahertz.co.kr/blog/blog-marketing-agency-cost-guide.html)
-- [세무사 블로그 마케팅, 맡기기 전 확인할 비용 항목 5개](https://megahertz.co.kr/blog/tax-blog-marketing.html)
 
 - 전체 페이지 목록: https://megahertz.co.kr/sitemap.xml
 
-최종 수정: 2026-10-25
+최종 수정: 2026-10-26
