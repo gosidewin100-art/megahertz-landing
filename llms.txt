@@ -37,6 +37,12 @@
 - [숏폼 제작 대행, 롱폼·숏폼 영상편집 완성본 납품](https://megahertz.co.kr/channels/video.html)
 
 ## 최근 칼럼
+- [병원 마케팅 비용, 견적서에서 확인할 7가지 항목과 계산법](https://megahertz.co.kr/blog/hospital-marketing-cost.html)
+- [스레드 대행, 맡기기 전 견적 항목 7가지 확인법](https://megahertz.co.kr/blog/threads-agency-cost.html)
+- [유튜브 편집 대행, 견적을 가르는 변수 5가지와 맡기는 순서](https://megahertz.co.kr/blog/youtube-editing-agency.html)
+- [온라인 마케팅 대행, 견적을 가르는 변수 5가지와 확인 순서](https://megahertz.co.kr/blog/agency-quote-variables.html)
+- [요양원 홍보, 맡기기 전 확인할 견적 항목 7가지](https://megahertz.co.kr/blog/nursing-home-marketing-quote.html)
+- [부동산 블로그 대행, 비용을 가르는 4가지 변수와 순서](https://megahertz.co.kr/blog/real-estate-blog-agency.html)
 - [변호사 숏폼 마케팅 대행, 광고 규정 확인 단계까지 진행 순서 정리](https://megahertz.co.kr/blog/lawyer-shortform-marketing-agency-proces.html)
 - [치과 숏폼 마케팅 비용, 심의 일정까지 따져 견적 비교하는 법](https://megahertz.co.kr/blog/dental-shortform-marketing-cost.html)
 - [치과 플레이스 마케팅 비용, 견적서에서 먼저 볼 항목과 심의 범위](https://megahertz.co.kr/blog/dental-place-marketing-cost.html)
@@ -71,13 +77,7 @@
 - [요양원 마케팅, 비용 구성과 맡기기 전 체크 순서 5가지](https://megahertz.co.kr/blog/nursing-home-marketing.html)
 - [부동산 플레이스 마케팅 대행사, 매물 문구 관리까지 따져보는 법](https://megahertz.co.kr/blog/real-estate-place-marketing-agency-quest.html)
 - [부동산 인스타 마케팅 대행사, 계약 전 광고 문구 위험까지 점검하는 질문 7가지](https://megahertz.co.kr/blog/real-estate-instagram-agency-questions.html)
-- [식당 숏폼 마케팅 업체, 메뉴판과 배달앱 정보까지 맞춰 보는 기준](https://megahertz.co.kr/blog/restaurant-shortform-marketing-agency.html)
-- [식당 플레이스 마케팅 업체, 메뉴판 정보부터 맞춰주는 곳 고르는 법](https://megahertz.co.kr/blog/restaurant-place-marketing-agency-guide.html)
-- [인테리어 홈페이지 제작 업체, 시공 사례 구조부터 따져보는 기준](https://megahertz.co.kr/blog/interior-website-agency-guide.html)
-- [인테리어 숏폼 마케팅 비용, 견적서 비교 전에 확인할 기준](https://megahertz.co.kr/blog/interior-shortform-marketing-cost.html)
-- [학원 홈페이지 제작 비용, 교습비 표시까지 따져 견적 비교하는 법](https://megahertz.co.kr/blog/academy-website-cost-guide.html)
-- [학원 숏폼 마케팅 비용, 교습비 표시 검수까지 따져보는 견적 기준](https://megahertz.co.kr/blog/academy-shortform-marketing-cost.html)
 
 - 전체 페이지 목록: https://megahertz.co.kr/sitemap.xml
 
-최종 수정: 2026-10-28
+최종 수정: 2026-10-29
