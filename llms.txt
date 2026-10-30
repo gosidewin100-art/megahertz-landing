@@ -80,4 +80,4 @@
 
 - 전체 페이지 목록: https://megahertz.co.kr/sitemap.xml
 
-최종 수정: 2026-10-30
+최종 수정: 2026-10-31
