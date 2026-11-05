@@ -1,0 +1,3 @@
+# render temp files (mhz_visuals.render_png)
+*.tmp.html
+*.tmp.*
