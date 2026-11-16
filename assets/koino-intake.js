@@ -1,7 +1,13 @@
-/* Koino CRM intake v1. Receipt-confirmed, retry-safe. No Google Sheets fallback. */
+/* Koino CRM intake v1. Receipt-confirmed, retry-safe.
+   2026-11-16 대표님 지시: www.megahertz.co.kr 접수는 대표님 스프레드시트(Apps Script)에도 사본을 남긴다. */
 (function () {
   'use strict';
   var endpoint = 'https://koino-crm-nine.vercel.app/api/intake';
+  var SHEET = 'https://script.google.com/macros/s/AKfycbyu9rmkn1JKefY83GY4xXPCAMFcMtjo3m6oyiQ1zQB58xRQKqk-6GlRuLR3y2_3Lnu_/exec';
+  function toSheet(body) {
+    if (body.company_url) return;
+    try { fetch(SHEET,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(body)}).catch(function(){}); } catch(_) {}
+  }
   var key = 'koino_intake_v1:' + location.pathname, memory = null;
   function load() {
     try { var x = JSON.parse(sessionStorage.getItem(key) || 'null'); if (x && Date.now() - x.at < 86400000) return x; } catch (_) {}
@@ -23,6 +29,7 @@
     var item = prepare(body);
     if (item.receipt) return {ok:true,receipt:item.receipt,duplicate:true};
     var payload = Object.assign({}, body, {id:item.id});
+    if (!item.sheet) { item.sheet=true; save(item); toSheet(payload); }
     for (var n=0;n<3;n++) {
       var ctl = new AbortController(), timer = setTimeout(function(){ctl.abort();},20000);
       try {
