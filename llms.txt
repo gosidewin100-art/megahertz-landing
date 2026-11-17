@@ -15,7 +15,7 @@
 - [무료 진단 신청](https://megahertz.co.kr/#apply)
 - [업종별 마케팅 대행](https://megahertz.co.kr/service/)
 - [채널별 운영 방법](https://megahertz.co.kr/channels/)
-- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 653편
+- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 654편
 
 ## 업종별 마케팅 대행
 - [학원 마케팅 대행, 학부모 검색에서 상담까지](https://megahertz.co.kr/service/academy-marketing.html)
@@ -85,6 +85,7 @@
 - [학원 블로그 마케팅 대행사, 교습비 표기까지 미리 점검하는 질문법](https://megahertz.co.kr/blog/academy-blog-marketing-agency-questions.html)
 
 ## 칼럼: 식당·카페·미용·필라테스·헬스장 등 매장
+- [헬스장 플레이스 마케팅 대행사, 계약 전 환불 기준까지 묻는 질문 정리](https://megahertz.co.kr/blog/gym-place-marketing-agency-questions.html)
 - [미용실 블로그 마케팅 대행, 요금표 확인부터 월 점검까지](https://megahertz.co.kr/blog/hair-salon-blog-marketing-agency-58.html)
 - [미용실 인스타 마케팅 업체, 요금표 규정과 포트폴리오 기준으로 고르는 법](https://megahertz.co.kr/blog/hair-salon-instagram-agency-guide.html)
 - [필라테스 숏폼 마케팅 업체, 체험 수업 예약으로 이어지는지 보는 6가지 기준](https://megahertz.co.kr/blog/pilates-short-form-marketing-agency.html)
@@ -96,7 +97,6 @@
 - [미용실 숏폼 마케팅 비용, 견적서에서 먼저 확인할 항목 정리](https://megahertz.co.kr/blog/hair-salon-shortform-marketing-cost.html)
 - [필라테스 인스타 마케팅 업체, 체험 수업 등록까지 보는 선택 기준](https://megahertz.co.kr/blog/pilates-instagram-marketing-agency.html)
 - [미용실 플레이스 마케팅 업체, 계약 전 요금표와 사진 기준 점검법](https://megahertz.co.kr/blog/beauty-salon-place-marketing-agency.html)
-- [미용실 인스타 마케팅 비용, 견적서에서 먼저 볼 항목과 질문 정리](https://megahertz.co.kr/blog/beauty-salon-instagram-marketing-cost.html)
 
 ## 칼럼: 인테리어·부동산·쇼핑몰
 - [인테리어 인스타 마케팅 대행, 계약 전 확인할 순서와 결과물 정리](https://megahertz.co.kr/blog/interior-instagram-marketing-agency-proc.html)
@@ -117,6 +117,7 @@
 - [네이버 스마트플레이스 광고, 맡기기 전 비용·기간·해지 기준](https://megahertz.co.kr/blog/smartplace-ad-guide.html)
 - [가게 홍보, 맡기기 전 비용·기간·해지 조건 기준](https://megahertz.co.kr/blog/store-promotion-guide.html)
 - [인스타 마케팅 대행, 비용이 정해지는 기준과 물어볼 질문](https://megahertz.co.kr/blog/instagram-marketing-agency-cost.html)
+- [미용실 인스타 마케팅 비용, 견적서에서 먼저 볼 항목과 질문 정리](https://megahertz.co.kr/blog/beauty-salon-instagram-marketing-cost.html)
 - [필라테스 체험단 마케팅 비용, 견적서에서 먼저 확인할 항목과 표시 규정](https://megahertz.co.kr/blog/pilates-experience-group-marketing-cost.html)
 - [마케팅 대행사 추천, 계약 전에 확인할 기준과 질문 정리](https://megahertz.co.kr/blog/marketing-agency-selection-guide.html)
 - [필라테스 숏폼 마케팅 비용, 견적서에서 먼저 볼 항목과 확인 질문](https://megahertz.co.kr/blog/pilates-shortform-marketing-cost.html)
@@ -124,10 +125,10 @@
 - [필라테스 블로그 마케팅 비용, 견적서에서 먼저 비교할 항목](https://megahertz.co.kr/blog/pilates-blog-marketing-cost.html)
 - [인스타그램 광고대행, 맡기기 전 확인할 기준과 비용 구조](https://megahertz.co.kr/blog/instagram-ad-agency-cost-guide.html)
 - [헬스장 숏폼 마케팅 비용, 견적서에서 먼저 볼 항목 정리](https://megahertz.co.kr/blog/gym-short-form-marketing-cost.html)
-- [헬스장 플레이스 마케팅 비용, 견적서에서 먼저 볼 항목 정리](https://megahertz.co.kr/blog/gym-place-marketing-cost.html)
 
 ## 칼럼: 채널 운영 방법(블로그·플레이스·인스타·숏폼 등)
 - [AI 검색 노출, 왜 지금 우리 사이트를 점검해야 하나](https://megahertz.co.kr/blog/ai-search-visibility-why-check-now.html)
+- [헬스장 플레이스 마케팅 비용, 견적서에서 먼저 볼 항목 정리](https://megahertz.co.kr/blog/gym-place-marketing-cost.html)
 - [식당 체험단 마케팅 업체, 원산지 표시까지 챙기는 곳 고르는 법](https://megahertz.co.kr/blog/restaurant-experience-marketing-agency.html)
 - [인스타 광고대행사, 맡기기 전 확인할 기준과 계약 전 질문](https://megahertz.co.kr/blog/instagram-ad-agency-selection-guide.html)
 - [블로그 체험단 후기 작성법, 맡기기 전 순서와 기간 점검 기준](https://megahertz.co.kr/blog/blog-experience-review-template.html)
@@ -138,7 +139,6 @@
 - [필라테스 플레이스 마케팅 비용, 체험 수업 전환까지 보는 견적 기준](https://megahertz.co.kr/blog/pilates-place-marketing-cost.html)
 - [헬스장 인스타 마케팅 비용, 견적서에서 먼저 볼 작업 범위와 확인 순서](https://megahertz.co.kr/blog/gym-instagram-marketing-cost.html)
 - [헬스장 블로그 마케팅 비용, 견적서 항목별로 비교하는 법](https://megahertz.co.kr/blog/gym-blog-marketing-cost.html)
-- [유튜브 쇼츠 대행, 직접 운영과 비교한 기준·순서·비용 구조](https://megahertz.co.kr/blog/youtube-shorts-agency-guide.html)
 
 ## 더 보기
 - 업종·채널 안내와 최근 칼럼 본문 묶음: https://megahertz.co.kr/llms-full.txt
