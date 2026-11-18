@@ -15,7 +15,7 @@
 - [무료 진단 신청](https://megahertz.co.kr/#apply)
 - [업종별 마케팅 대행](https://megahertz.co.kr/service/)
 - [채널별 운영 방법](https://megahertz.co.kr/channels/)
-- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 664편
+- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 665편
 
 ## 업종별 마케팅 대행
 - [학원 마케팅 대행, 학부모 검색에서 상담까지](https://megahertz.co.kr/service/academy-marketing.html)
@@ -57,6 +57,7 @@
 - [병원 플레이스 마케팅 대행, 진료과별 검색어와 심의 단계를 미리 잡는 순서](https://megahertz.co.kr/blog/hospital-place-marketing-process.html)
 
 ## 칼럼: 법률·세무 전문직
+- [변호사 숏폼 마케팅, 광고 규정 안에서 문의로 잇는 점검법](https://megahertz.co.kr/blog/lawyer-shortform-marketing-mistakes.html)
 - [변호사 플레이스 마케팅, 급한 문의를 놓치지 않는 실수 점검법](https://megahertz.co.kr/blog/lawyer-place-marketing-mistakes.html)
 - [전문직 마케팅, 맡기기 전 확인할 견적·해지 조건 6가지](https://megahertz.co.kr/blog/professional-marketing-checklist.html)
 - [법무법인 마케팅, 맡기기 전 비용과 해지 조건 확인 기준](https://megahertz.co.kr/blog/law-firm-marketing-cost.html)
@@ -68,7 +69,6 @@
 - [변호사 블로그 마케팅 대행, 광고 규정 확인을 거치는 진행 순서](https://megahertz.co.kr/blog/lawyer-blog-marketing-process.html)
 - [변호사 홈페이지 제작 대행사, 광고 규정 질문으로 견적 비교하기](https://megahertz.co.kr/blog/lawyer-website-agency-questions.html)
 - [변호사 숏폼 마케팅 비용, 광고 규정 검수까지 견적에 넣는 법](https://megahertz.co.kr/blog/lawyer-shortform-marketing-cost.html)
-- [변호사 플레이스 마케팅 비용, 견적서에서 먼저 볼 항목 정리](https://megahertz.co.kr/blog/lawyer-place-marketing-cost.html)
 
 ## 칼럼: 학원·교육
 - [학원 홈페이지 제작 대행, 교습비 표기와 상담 동선까지 정리](https://megahertz.co.kr/blog/academy-website-production-process.html)
