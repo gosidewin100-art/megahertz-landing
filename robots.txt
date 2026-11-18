@@ -1,3 +1,52 @@
+# megahertz.co.kr robots.txt (2026-11-18 AI 검색 크롤러 이름 명시, 막는 곳 없음)
+# dash.html, /d/, /i/ 는 페이지 안에 noindex 가 있습니다. robots 로 막으면 크롤러가 noindex 를 읽지 못하므로 막지 않습니다.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Daum
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://megahertz.co.kr/sitemap.xml
