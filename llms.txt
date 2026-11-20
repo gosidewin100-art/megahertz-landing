@@ -47,7 +47,7 @@
 - [무료 진단 신청](https://megahertz.co.kr/#apply)
 - [업종별 마케팅 대행](https://megahertz.co.kr/service/)
 - [채널별 운영 방법](https://megahertz.co.kr/channels/)
-- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 697편
+- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 698편
 
 ## 칼럼: 병원·의료(치과·피부과·성형외과·한의원·동물병원)
 - [치과 숏폼 마케팅, 의료광고 심의에서 막히지 않는 시작법](https://megahertz.co.kr/blog/dental-shortform-marketing-mistakes.html)
@@ -106,6 +106,7 @@
 - [카페 인스타 마케팅 비용, 견적서에서 먼저 확인할 항목](https://megahertz.co.kr/blog/cafe-instagram-marketing-cost.html)
 
 ## 칼럼: 인테리어·부동산·쇼핑몰
+- [쇼핑몰 숏폼 마케팅 비용, 견적서에서 먼저 확인할 작업 범위 기준](https://megahertz.co.kr/blog/shopping-mall-shortform-marketing-cost.html)
 - [쇼핑몰 블로그 마케팅 비용, 견적서에서 먼저 볼 작업 범위와 확인 순서](https://megahertz.co.kr/blog/shopping-mall-blog-marketing-cost.html)
 - [인테리어 홈페이지 제작 대행, 시공 사례와 등록 정보를 먼저 정리하는 순서](https://megahertz.co.kr/blog/interior-website-agency-process.html)
 - [인테리어 숏폼 마케팅 대행, 공정 사진을 상담 문의로 잇는 진행 순서](https://megahertz.co.kr/blog/interior-shortform-marketing-agency-proc.html)
@@ -117,7 +118,6 @@
 - [인테리어 홈페이지 제작 대행사, 시공 사례와 하자 처리 질문 정리](https://megahertz.co.kr/blog/interior-homepage-agency-questions.html)
 - [인테리어 숏폼 마케팅 대행사, 계약 전 등록 여부와 작업 방식 비교법](https://megahertz.co.kr/blog/interior-shortform-agency-questions.html)
 - [부동산 숏폼 마케팅 업체, 허위매물 위험을 줄이는 6가지 확인 기준](https://megahertz.co.kr/blog/real-estate-shortform-agency-checklist.html)
-- [부동산 플레이스 마케팅 업체, 허위매물 위험을 줄이는 선택 기준](https://megahertz.co.kr/blog/real-estate-place-marketing-agency.html)
 
 ## 칼럼: 비용·견적·업체 고르는 법
 - [프랜차이즈 홈페이지 제작 비용, 가맹 문의 품질까지 보는 견적 비교 기준](https://megahertz.co.kr/blog/franchise-website-cost-guide.html)
