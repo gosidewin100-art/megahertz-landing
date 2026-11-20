@@ -233,19 +233,36 @@
     window.scrollTo(0,0);
   }
 
-  function load(code){
-    if(!code){ el("err").textContent="코드를 입력해 주세요."; el("err").style.display="block"; return; }
+  // 2026-11-20: 한글 입력 중 Enter 두 번 요청 방지, 응답 없음·일시 오류 때 1회 재시도, 마지막 요청만 반영.
+  var ERR_NF="등록된 상호를 찾지 못했습니다. 상호명을 다시 확인해 주세요.";
+  var ERR_NET="연결이 잠시 원활하지 않습니다. 잠시 후 다시 시도해 주세요.";
+  var _cur=0;
+  function fail(msg){ el("enter").disabled=false; el("enter").textContent="현황 보기"; el("err").textContent=msg; el("err").style.display="block"; }
+  function load(code, retry){
+    if(!code){ fail("코드를 입력해 주세요."); return; }
     el("err").style.display="none"; el("enter").disabled=true; el("enter").textContent="확인 중...";
-    var name="__dcb"+(++_cb);
-    window[name]=function(data){ try{delete window[name];}catch(e){} render(data); };
+    var my=++_cb; _cur=my; var name="__dcb"+my, done=false;
     var s=document.createElement("script");
-    s.onerror=function(){ el("enter").disabled=false; el("enter").textContent="현황 보기"; el("err").textContent="연결에 실패했습니다. 잠시 후 다시 시도해 주세요."; el("err").style.display="block"; };
+    function finish(){ done=true; clearTimeout(t); try{delete window[name];}catch(e){window[name]=undefined;} if(s.parentNode) s.parentNode.removeChild(s); }
+    function again(){ if(my!==_cur) return; if(!retry) load(code, true); else fail(ERR_NET); }
+    window[name]=function(data){
+      if(done) return; finish(); if(my!==_cur) return;
+      if(!data || !data.ok){ fail(ERR_NF); return; }
+      try{ render(data); }catch(e){ fail(ERR_NET); }
+    };
+    var t=setTimeout(function(){ if(!done){ finish(); window[name]=function(){}; again(); } }, 30000);
+    s.onerror=function(){ if(!done){ finish(); window[name]=function(){}; again(); } };
     s.src=WEBAPP+"?dash="+encodeURIComponent(code)+"&callback="+name+"&_="+Date.now();
     document.body.appendChild(s);
   }
 
   el("enter").addEventListener("click",function(){ load(el("code").value.trim()); });
-  el("code").addEventListener("keydown",function(e){ if(e.key==="Enter") load(el("code").value.trim()); });
+  var _kt=null;
+  el("code").addEventListener("keydown",function(e){
+    if(e.key!=="Enter") return;
+    if(_kt) return;
+    _kt=setTimeout(function(){ _kt=null; load(el("code").value.trim()); }, 80);
+  });
   el("logout").addEventListener("click",function(){
     el("dash").style.display="none"; el("login").style.display="flex"; el("code").value="";
     try{ history.replaceState(null,"",location.pathname); }catch(e){}
