@@ -47,7 +47,7 @@
 - [무료 진단 신청](https://megahertz.co.kr/#apply)
 - [업종별 마케팅 대행](https://megahertz.co.kr/service/)
 - [채널별 운영 방법](https://megahertz.co.kr/channels/)
-- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 734편
+- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 735편
 
 ## 칼럼: 병원·의료(치과·피부과·성형외과·한의원·동물병원)
 - [치과 숏폼 마케팅, 의료광고 심의에서 막히지 않는 시작법](https://megahertz.co.kr/blog/dental-shortform-marketing-mistakes.html)
@@ -92,6 +92,7 @@
 - [학원 인스타 마케팅 대행, 교습비 표시 확인부터 월 점검까지 한눈에](https://megahertz.co.kr/blog/academy-instagram-marketing-agency-proce.html)
 
 ## 칼럼: 식당·카페·미용·필라테스·헬스장 등 매장
+- [미용실 플레이스 마케팅 대행사, 요금표 규정까지 계약 전에 확인할 7가지 질문](https://megahertz.co.kr/blog/beauty-salon-place-marketing-questions.html)
 - [헬스장 블로그 마케팅 대행, 규정 확인까지 끝내는 진행 순서](https://megahertz.co.kr/blog/gym-blog-marketing-agency-process.html)
 - [카페 플레이스 마케팅 업체, 사진·좌석·원산지 표시까지 챙기는 비교 기준](https://megahertz.co.kr/blog/cafe-place-marketing-agency-guide.html)
 - [카페 인스타 마케팅 업체, 계약 전 확인할 표시·광고 기준과 점검 질문](https://megahertz.co.kr/blog/cafe-instagram-marketing-agency.html)
@@ -103,7 +104,6 @@
 - [미용실 인스타 마케팅 대행사, 계약 전 견적 비교를 쉽게 하는 질문 7개](https://megahertz.co.kr/blog/beauty-salon-instagram-agency-questions.html)
 - [필라테스 숏폼 마케팅 대행사, 체험 수업 예약 연결을 계약 전에 확인하는 법](https://megahertz.co.kr/blog/pilates-shortform-marketing-agency-quest.html)
 - [필라테스 플레이스 마케팅 대행사, 환불 기준까지 따지는 계약 전 질문](https://megahertz.co.kr/blog/pilates-place-marketing-agency-questions.html)
-- [맘카페 광고 비용, 견적서에서 확인할 항목과 기간 기준](https://megahertz.co.kr/blog/momcafe-ad-cost.html)
 
 ## 칼럼: 인테리어·부동산·쇼핑몰
 - [인테리어 플레이스 마케팅, 시공 사례와 등록 정보를 먼저 갖추는 점검법](https://megahertz.co.kr/blog/interior-place-marketing-mistakes.html)
@@ -123,6 +123,7 @@
 - [프랜차이즈 블로그 마케팅 업체, 가맹 문의 품질로 비교하는 기준](https://megahertz.co.kr/blog/franchise-blog-marketing-agency-guide.html)
 - [블로그 광고 비용, 견적서 항목별 금액과 수정·환불 기준](https://megahertz.co.kr/blog/blog-ad-cost.html)
 - [인스타그램 운영 대행, 견적서에서 확인할 비용·기간·계약 기준](https://megahertz.co.kr/blog/instagram-agency-cost-649.html)
+- [맘카페 광고 비용, 견적서에서 확인할 항목과 기간 기준](https://megahertz.co.kr/blog/momcafe-ad-cost.html)
 - [블로그 관리 업체, 월 비용 구성과 계약 전 확인 기준](https://megahertz.co.kr/blog/blog-management-cost-923.html)
 - [네이버 블로그 홍보, 비용이 정해지는 기준과 견적 체크표](https://megahertz.co.kr/blog/naver-blog-promotion-cost.html)
 - [음식점 홍보, 맡기기 전 비용 항목과 견적 확인 순서](https://megahertz.co.kr/blog/restaurant-promotion-cost.html)
@@ -131,7 +132,6 @@
 - [미용실 체험단 마케팅 업체, 요금표 표시까지 챙기는 선택 기준](https://megahertz.co.kr/blog/hair-salon-experience-marketing-agency.html)
 - [인스타 홍보 대행, 맡기기 전 비용 항목과 계약 확인 기준](https://megahertz.co.kr/blog/instagram-agency-cost-955.html)
 - [쇼츠 영상 제작, 견적 비용과 기간·수정 조건 체크 기준](https://megahertz.co.kr/blog/shorts-video-cost.html)
-- [음식점 광고, 맡기기 전 비용·기간·해지 조건 체크 기준](https://megahertz.co.kr/blog/restaurant-ad-cost.html)
 
 ## 칼럼: 채널 운영 방법(블로그·플레이스·인스타·숏폼 등)
 - [블로그 원고 대행, 맡기기 전 확인할 수정 횟수와 기간 기준](https://megahertz.co.kr/blog/blog-writing-agency.html)
@@ -142,10 +142,10 @@
 - [식당 블로그 마케팅 대행, 메뉴판·원산지 확인까지 순서대로 맡기는 법](https://megahertz.co.kr/blog/restaurant-blog-marketing-process.html)
 - [카페 블로그 마케팅 업체, 계약 전 확인할 표시·광고 기준](https://megahertz.co.kr/blog/cafe-blog-marketing-agency-guide.html)
 - [헬스장 숏폼 마케팅 대행사, 계약 전 환불 기준까지 짚는 질문 7가지](https://megahertz.co.kr/blog/gym-shortform-marketing-agency-questions.html)
+- [음식점 광고, 맡기기 전 비용·기간·해지 조건 체크 기준](https://megahertz.co.kr/blog/restaurant-ad-cost.html)
 - [플레이스 검색 광고, 맡기기 전 비용·기간·해지 확인 기준](https://megahertz.co.kr/blog/place-search-ad-cost.html)
 - [네이버 블로그 관리 대행, 맡기기 전 비용 항목과 계약 기준](https://megahertz.co.kr/blog/blog-management-cost.html)
 - [SNS 운영 대행, 견적서 비용 항목과 계약 조건 기준](https://megahertz.co.kr/blog/sns-management-cost.html)
-- [프랜차이즈 숏폼 마케팅 업체, 정보공개서 문구까지 함께 점검하는 곳 고르기](https://megahertz.co.kr/blog/franchise-short-form-agency-guide.html)
 
 ## 더 보기
 - 업종·채널 안내와 최근 칼럼 본문 묶음: https://megahertz.co.kr/llms-full.txt
