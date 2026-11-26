@@ -47,7 +47,7 @@
 - [무료 진단 신청](https://megahertz.co.kr/#apply)
 - [업종별 마케팅 대행](https://megahertz.co.kr/service/)
 - [채널별 운영 방법](https://megahertz.co.kr/channels/)
-- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 786편
+- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 787편
 
 ## 칼럼: 병원·의료(치과·피부과·성형외과·한의원·동물병원)
 - [치과 블로그 대행, 견적서 비용·기간·해지 조건 체크](https://megahertz.co.kr/blog/dental-blog-agency.html)
@@ -134,6 +134,7 @@
 - [릴스 영상 제작, 맡기기 전 비용과 기간을 정하는 기준](https://megahertz.co.kr/blog/reels-video-production.html)
 
 ## 칼럼: 채널 운영 방법(블로그·플레이스·인스타·숏폼 등)
+- [프랜차이즈 블로그 마케팅 대행사, 가맹 문의 품질을 가늠하는 질문 정리](https://megahertz.co.kr/blog/franchise-blog-marketing-agency-question.html)
 - [프랜차이즈 홈페이지 제작 대행사, 정보공개서 문구까지 점검하는 계약 전 질문](https://megahertz.co.kr/blog/franchise-homepage-agency-contract-quest.html)
 - [인스타그램 광고 단가, 광고비·대행료 나눠 보는 4단계 기준](https://megahertz.co.kr/blog/instagram-ad-cost-22.html)
 - [헬스장 체험단 마케팅 대행, 규정 확인까지 끝내는 진행 순서](https://megahertz.co.kr/blog/gym-trial-marketing-agency-process.html)
@@ -145,7 +146,6 @@
 - [플레이스 마케팅 대행사, 견적서에서 확인할 비용·기간 기준](https://megahertz.co.kr/blog/place-agency-cost.html)
 - [바이럴 대행사, 비용 구조와 계약 전 체크 기준 7가지](https://megahertz.co.kr/blog/viral-agency-cost.html)
 - [필라테스 블로그 마케팅 대행, 체험 수업 문의로 이어지는 진행 순서](https://megahertz.co.kr/blog/pilates-blog-marketing-agency-process.html)
-- [헬스장 플레이스 마케팅 대행, 규정 표시 점검까지 포함된 진행 순서](https://megahertz.co.kr/blog/gym-place-marketing-agency-process.html)
 
 ## 더 보기
 - 업종·채널 안내와 최근 칼럼 본문 묶음: https://megahertz.co.kr/llms-full.txt
