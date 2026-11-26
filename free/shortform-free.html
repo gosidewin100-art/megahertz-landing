@@ -4,76 +4,71 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#e8603c">
+<meta name="theme-color" content="#162b29">
 <meta name="color-scheme" content="light">
-<title>무료 숏폼 1편 제작</title>
-<meta name="description" content="현장 사진·영상이나 운영 중인 채널 링크를 보내 주시면, 그 자료로 세로형 숏폼 1편을 무료로 편집해 드립니다.">
+<title>틴팅·PPF | 숏폼 1개 + 운영 채널 진단서</title>
+<meta name="description" content="보유하신 틴팅·PPF 시공 자료로 숏폼 영상 1개와 현재 운영 중인 채널 진단서를 무료로 제공해 드립니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="icon" href="/favicon.ico">
 <style>
-*{box-sizing:border-box}
-:root{--cream:#fff7f0;--paper:#fff;--coral:#e8603c;--coral-soft:#fde7dd;--navy:#1f2a44;--body:#33405c;--muted:#6b7280;--line:#f1dccf}
-body{margin:0;background:var(--cream);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;line-height:1.7;-webkit-text-size-adjust:100%}
-.wrap{max-width:640px;margin:0 auto;padding:0 16px 40px}
-.hero{background:var(--coral);color:#fff;border-radius:0 0 22px 22px;padding:26px 22px 24px;margin:0 -16px 18px}
-.dots{display:flex;gap:6px;margin-bottom:14px}.dots i{width:10px;height:10px;border-radius:50%;background:#fff;display:block}.dots i:nth-child(2){background:#ffd3c2}.dots i:nth-child(3){background:var(--navy)}
-.kicker{font-size:12px;font-weight:800;letter-spacing:2px;color:#fff1ea;margin:0 0 6px}
-.hero h1{font-size:25px;line-height:1.38;margin:0 0 10px;letter-spacing:-.5px}.hero p{margin:0;font-size:14.5px;color:#fff6f1}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 18px;margin:0 0 14px}
-.card h2{font-size:17px;color:var(--navy);margin:0 0 10px}
-.gets li{margin:0 0 6px;font-size:14.5px}
-label.f{display:block;font-weight:800;color:var(--navy);font-size:14.5px;margin:14px 0 6px}
-label.f em{font-style:normal;color:var(--coral);margin-left:3px}
-input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:inherit;font-size:16px;color:var(--navy);padding:12px 13px;border:1.5px solid #ecd2c4;border-radius:11px;background:#fffdfb;outline:none}
-input:focus,textarea:focus{border-color:var(--coral)}textarea{min-height:84px;resize:vertical}
-.consent{background:var(--cream);border-radius:12px;padding:13px 14px;font-size:13px;color:var(--body);margin:16px 0 10px}
-.consent b{color:var(--navy)}
-.agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:700;color:var(--navy);margin:6px 0 14px}
-.agree input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--coral)}
-button{width:100%;border:0;background:var(--coral);color:#fff;font:inherit;font-weight:800;font-size:17px;padding:16px;border-radius:12px;cursor:pointer}
-button:disabled{opacity:.6}
-.msg{display:none;margin:12px 0 0;padding:14px;border-radius:12px;font-size:14.5px;font-weight:700}
-.msg.ok{display:block;background:#e8f6ee;color:#14532d}.msg.err{display:block;background:#fdecec;color:#7f1d1d}
-.small{font-size:12.5px;color:var(--muted);margin:8px 0 0}
-footer{font-size:11.5px;color:var(--muted);line-height:1.75;padding:6px 4px 0}
-@media (min-width:700px){.hero{margin:18px 0 18px;border-radius:22px}.hero h1{font-size:28px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}
+:root{--cream:#f1f3ee;--paper:#fff;--coral:#264b3f;--navy:#162b29;--body:#35463f;--muted:#68766e;--line:#dce3da;--accent:#cee9a7}
+body{margin:0;background:var(--cream);color:var(--body);font-family:Pretendard,'Malgun Gothic',Arial,sans-serif;font-size:16px;line-height:1.75;word-break:keep-all;-webkit-text-size-adjust:100%}
+a{color:inherit}button,input,textarea{font:inherit}.wrap{max-width:1120px;margin:auto;padding:0 32px 48px}.topbar{display:flex;justify-content:space-between;align-items:center;padding:24px 0;font-size:14px;letter-spacing:.06em}.brand{font-weight:800;letter-spacing:-.03em;font-size:18px}.topbar a{text-decoration:none;border-bottom:1px solid #829584}
+.hero{position:relative;isolation:isolate;padding:68px 56px;background:#162b29;color:white;overflow:hidden}.hero:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,37,32,.2),rgba(14,37,32,.05)),url('../assets/tinting-hero.png') center/cover no-repeat}.kicker,.eyebrow{font-size:14px;letter-spacing:.12em;font-weight:600;margin:0 0 18px}.kicker{color:#c7d8cb}.hero h1{font-size:clamp(34px,4.4vw,54px);line-height:1.22;letter-spacing:-.045em;margin:0 0 24px;font-weight:750}.hero h1 span{color:var(--accent)}.hero .lead{max-width:550px;color:#dfebe1;margin:0 0 28px;font-size:18px}.cta{display:inline-block;padding:15px 24px;background:var(--accent);color:#18362a;font-weight:750;text-decoration:none;border-radius:4px}.hero .fine{font-size:14px;color:#cfdbd2;margin:14px 0 0}.offerbar{display:flex;gap:32px;border-bottom:1px solid #cbd6ca;padding:20px 4px;color:#47624d;font-size:15px}.offerbar strong{color:#1b382c}
+.section{padding:60px 0}.eyebrow{color:#617c57}.section h2,.form-heading{font-size:32px;line-height:1.35;letter-spacing:-.035em;color:var(--navy);margin:0 0 16px}.intro{color:var(--muted);margin:0 0 28px}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:20px}.benefit{border-top:2px solid #264b3f;background:white;padding:28px}.number{font-size:14px;font-weight:750;color:#64805a}.benefit h3{font-size:25px;letter-spacing:-.03em;margin:12px 0}.benefit p{margin:0;color:#607166}.benefit ul{padding-left:20px;margin:18px 0 0}.benefit li{margin:6px 0}.small{font-size:14px;color:var(--muted);line-height:1.7}.works{background:#e5ebe1;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}.works h3{font-size:20px;margin:0 0 16px}.works img{width:100%;display:block}.works video{width:100%;max-width:250px;display:block;margin:0 auto;max-height:445px;background:#162b29}.works figure{margin:0}.works figcaption{font-size:14px;color:#5d705f;margin-top:16px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}.step{border-top:1px solid #b9c8b7;padding-top:20px}.step h3{margin:8px 0;font-size:20px}.step p{margin:0;color:var(--muted)}
+.apply-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:48px;align-items:start;border-top:1px solid #cbd6ca;padding-top:52px}.apply-copy p{color:var(--muted)}.card{background:white;padding:32px;border:1px solid var(--line);border-radius:6px}.card h2{font-size:26px;margin:0 0 8px;color:var(--navy)}label.f{display:block;font-weight:700;color:var(--navy);margin:20px 0 7px}label.f em{font-style:normal;color:#577544;margin-left:4px}input[type=text],input[type=email],input[type=tel],textarea{width:100%;font-size:16px;padding:13px 14px;border:1px solid #c8d2c5;border-radius:4px;background:#fcfdfb;color:var(--navy)}input:focus,textarea:focus{outline:2px solid #628456;outline-offset:2px}textarea{min-height:100px;resize:vertical}.consent{background:#f2f5ef;padding:18px;font-size:14px;margin:24px 0 16px}.agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:16px 0}.agree input{flex:none;width:20px;height:20px;margin:3px 0 0;accent-color:var(--coral)}.nl-note{font-size:14px!important;opacity:1!important;color:var(--muted);margin:0 0 24px 30px!important}button{width:100%;background:var(--coral);border:0;color:white;font-weight:750;font-size:17px;padding:17px;border-radius:4px;cursor:pointer}button:disabled{opacity:.6}.msg{display:none;padding:14px;margin-top:16px;font-size:15px}.msg.ok{display:block;background:#e8f6ee;color:#14532d}.msg.err{display:block;background:#fdecec;color:#7f1d1d}footer{font-size:14px;line-height:1.8;color:var(--muted);border-top:1px solid var(--line);margin-top:48px;padding-top:24px}a:focus-visible,button:focus-visible{outline:3px solid #779956;outline-offset:4px}
+@media(max-width:720px){.wrap{padding:0 20px 32px}.topbar{padding:18px 0}.hero{padding:44px 24px;margin:0 -20px}.hero:before{background-position:62% center;opacity:.7}.hero .lead{font-size:16px}.hero h1{font-size:36px}.offerbar{gap:10px;flex-wrap:wrap;font-size:14px}.benefits,.works,.steps,.apply-layout{grid-template-columns:1fr}.section{padding:40px 0}.section h2,.form-heading{font-size:28px}.works{padding:24px;gap:32px}.apply-layout{gap:20px;padding-top:36px}.card{padding:24px 20px}.benefit{padding:24px}.steps{gap:24px}.hero .cta{display:block;text-align:center}.topbar span:last-child{font-size:12px}.apply-copy p{margin-bottom:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <style>/* nl-optin-20261021 */.nl-optin{font-weight:700}.nl-optin input{flex:none}.nl-optin span{display:block}.nl-note{font-size:12.5px;line-height:1.6;margin:-6px 0 16px 32px;opacity:.78}</style>
 <script src="/assets/analytics.js?v=20261116" defer></script>
 </head>
 <body>
 <div class="wrap">
-  <div class="hero">
-    <div class="dots"><i></i><i></i><i></i></div>
-    <p class="kicker">무료 숏폼 1편 제작</p>
-    <h1>사장님 일, 영상 한 편으로<br>먼저 보여드리겠습니다</h1>
-    <p>현장 사진·영상이나 운영 중인 채널 링크를 보내 주시면, 그 자료로 세로형 숏폼 1편을 무료로 편집해 드립니다.</p>
-  </div>
-  <div class="card">
-    <h2>받아보시는 것</h2>
-    <ul class="gets"><li>보내주신 사진·영상으로 15~30초 세로형 숏폼 1편 편집</li><li>첫 2초 문구와 자막까지 넣어서 완성본 전달</li><li>올리실 채널(인스타 릴스·유튜브 쇼츠·네이버 클립)에 맞춘 비율</li><li>완성본을 보시고 이어서 맡길지 정하시면 됩니다</li></ul>
-    <p class="small">비용은 들지 않고, 받아보신 뒤 이어서 맡길지는 자유롭게 정하시면 됩니다. 결과(문의·매출 등)를 약속하는 서비스는 아닙니다.</p>
-    
-  </div>
+  <header class="topbar"><span class="brand">종합마케팅대행</span><span>TINTING &amp; PPF</span></header>
+  <section class="hero">
+    <p class="kicker">시공의 완성도를, 콘텐츠로.</p>
+    <h1>잘 끝낸 시공,<br>다음 고객에게도<br><span>보이게 만드세요.</span></h1>
+    <p class="lead">보유하신 시공 사진·영상으로 숏폼 1개,<br>현재 운영 중인 채널을 살펴본 진단서까지.<br>틴팅·PPF 매장을 위해 무료로 제공해 드립니다.</p>
+    <a class="cta" href="#f">숏폼 + 채널 진단서 신청하기</a>
+    <p class="fine">업체당 숏폼 1개 · 제공 자료로 제작 · 별도 촬영 제외</p>
+  </section>
+  <div class="offerbar"><span><strong>01</strong> 숏폼 영상 1개</span><span><strong>02</strong> 현재 운영 중인 채널 진단서</span><span>확인 후 진행 여부를 결정하세요.</span></div>
+  <section class="section">
+    <p class="eyebrow">WHAT YOU GET</p><h2>영상과 진단서,<br>두 가지를 함께 받아보세요.</h2>
+    <p class="intro">이미 갖고 계신 자료와 운영 채널에서 시작합니다.</p>
+    <div class="benefits">
+      <article class="benefit"><span class="number">01 / SHORT-FORM</span><h3>숏폼 영상 1개</h3><p>틴팅 작업 과정, PPF 마감, 출고 장면을<br>짧고 이해하기 쉬운 영상으로 정리합니다.</p><ul><li>제공하신 자료로 15~30초 세로형 영상 편집</li><li>첫 화면 문구와 시공 설명 자막 구성</li><li>릴스·쇼츠·네이버 클립용 완성본 전달</li></ul></article>
+      <article class="benefit"><span class="number">02 / CHANNEL REVIEW</span><h3>운영 채널 진단서</h3><p>현재 운영 중인 채널을 살펴보고,<br>개선할 부분을 문서로 정리해 드립니다.</p><ul><li>매장 소개와 시공 콘텐츠 구성 점검</li><li>고객이 문의하기까지의 동선 확인</li><li>먼저 개선하면 좋을 항목과 방향 제안</li></ul></article>
+    </div><p class="small">제작물과 진단서를 받아보신 뒤, 추가 운영 여부는 자유롭게 결정하실 수 있습니다.</p>
+  </section>
+  <section class="section" style="padding-top:0">
+    <p class="eyebrow">SELECTED WORK</p><h2>시공 자료에 디자인을 더하면.</h2><p class="intro">실제 제작한 블로그·홈페이지 디자인과 숏폼 일부입니다.</p>
+    <div class="works"><figure><h3>블로그 · 홈페이지 디자인</h3><img src="../assets/reference-anonymous-v3.png" alt="식별 정보를 가린 블로그 썸네일과 홈페이지 제작 예시" loading="lazy"><figcaption>고객사 보호를 위해 상호·지역·연락처·인물 등 식별 정보를 가린 편집본입니다.</figcaption></figure><figure><h3>자막과 디자인을 입힌 숏폼</h3><video controls autoplay muted loop playsinline width="250" height="445" poster="../assets/shortform-poster.jpg" preload="auto" aria-label="식별 정보를 가린 숏폼 영상 3초 발췌"><source src="../assets/shortform-design-anonymous.mp4" type="video/mp4"></video><figcaption>기존 제작 영상 3초 발췌 · 무음<br>작업 과정과 마감이 보이도록 구성합니다.</figcaption></figure></div>
+  </section>
+  <section class="section" style="padding-top:0"><p class="eyebrow">HOW IT WORKS</p><h2>신청은 간단하게,<br>자료 확인은 함께.</h2><div class="steps"><article class="step"><span class="number">01</span><h3>매장과 채널을 알려주세요</h3><p>신청서에 연락처, 운영 채널 주소와 알리고 싶은 시공을 남겨주세요.</p></article><article class="step"><span class="number">02</span><h3>시공 자료를 확인합니다</h3><p>연락드린 뒤 사진·영상과 작업 내용을 전달받아 구성을 정합니다.</p></article><article class="step"><span class="number">03</span><h3>영상과 진단서를 받습니다</h3><p>숏폼 1개와 현재 운영 중인 채널 진단서를 이메일로 전달해 드립니다.</p></article></div></section>
+  <div class="apply-layout"><div class="apply-copy"><p class="eyebrow">START WITH YOUR WORK</p><h2 class="form-heading">우리 매장 시공으로<br>먼저 확인해 보세요.</h2><p>숏폼 영상 1개 +<br>현재 운영 중인 채널 진단서 제공</p><p class="small">진단받을 채널 주소를 함께 남겨주시면<br>운영 현황을 살펴보는 데 도움이 됩니다.</p></div>
   <form class="card" id="f" novalidate>
-    <h2>신청서</h2>
-    <label class="f" for="biz">업체명<em>*</em></label><input id="biz" name="biz" type="text" placeholder="예: ○○인테리어" required maxlength="200">
-<label class="f" for="email">이메일<em>*</em></label><input id="email" name="email" type="email" placeholder="완성본을 받을 주소" required maxlength="200">
+    <h2>무료 제작 · 채널 진단 신청</h2><p class="small">완성본과 진단서를 받으실 정보를 남겨주세요.</p>
+    <label class="f" for="biz">업체명<em>*</em></label><input id="biz" name="biz" type="text" placeholder="예: ○○틴팅 / ○○PPF" required maxlength="200">
+<label class="f" for="email">이메일<em>*</em></label><input id="email" name="email" type="email" placeholder="숏폼과 채널 진단서를 받을 주소" required maxlength="200">
 <label class="f" for="phone">전화번호<em>*</em></label><input id="phone" name="phone" type="tel" placeholder="자료 확인 연락용" required maxlength="200">
-<label class="f" for="links">운영 중인 링크 (선택)</label><textarea id="links" name="links" placeholder="인스타·블로그·플레이스·유튜브 등" maxlength="1000"></textarea>
-<label class="f" for="note">원하는 내용<em>*</em></label><textarea id="note" name="note" placeholder="예: 욕실 시공 전후 과정을 보여주고 싶어요" required maxlength="1000"></textarea>
+<label class="f" for="links">현재 운영 중인 채널 주소 (선택)</label><textarea id="links" name="links" placeholder="인스타·블로그·플레이스·유튜브 등" maxlength="1000"></textarea>
+<label class="f" for="note">원하는 내용<em>*</em></label><textarea id="note" name="note" placeholder="예: 전면 틴팅 작업 과정과 PPF 마감 상태를 보여주고 싶어요" required maxlength="1000"></textarea>
 
     <div class="consent"><b>개인정보 수집·이용 안내</b><br>
-      · 수집 항목: 업체명, 이메일, 전화번호, 운영 중인 링크 (선택), 원하는 내용<br>
-      · 이용 목적: 무료 숏폼 제작을 위한 자료 확인·완성본 회신 및 관련 상담 연락<br>
+      · 수집 항목: 업체명, 이메일, 전화번호, 현재 운영 중인 채널 주소 (선택), 원하는 내용<br>
+      · 이용 목적: 무료 숏폼 제작 및 운영 채널 진단을 위한 자료 확인·결과물 회신 및 관련 상담 연락<br>
       · 보유 기간: 회신 완료 후 1년 (요청하시면 즉시 파기)<br>
       · 동의를 거부하실 수 있으며, 거부 시 신청이 접수되지 않습니다.</div>
     <label class="agree"><input type="checkbox" id="agree"> 위 개인정보 수집·이용에 동의합니다 (필수)</label>
     <label class="agree nl-optin"><input type="checkbox" id="optin"> <span>원장님·대표님·사장님 업종별 무료 마케팅 자료 받기 (선택, 월 1~2회 마케팅 사례·소식 메일 포함, 언제든 수신 거부)<span class="nl-value"></span></span></label>
     <p class="nl-note">체크하시면 업종별 무료 마케팅 자료와 마케팅 사례·소식 메일(광고성 정보)을 이메일로 받는 데 동의하시는 것입니다. 보내는 내용은 같은 업종에서 실제로 진행한 사례와 바로 써볼 수 있는 점검 자료입니다. 체크하지 않아도 신청은 그대로 접수되고, 메일마다 있는 수신 거부 링크로 언제든 그만 받으실 수 있습니다.</p>
-    <button type="submit" id="btn">무료 숏폼 1편 신청하기</button>
+    <button type="submit" id="btn">숏폼 + 채널 진단서 신청하기</button>
     <div class="msg" id="msg"></div>
     <p class="small">카톡이 편하시면 <a href="https://open.kakao.com/o/s4E9FpRi" data-cta="kakao" rel="noopener">종합마케팅 상담 오픈채팅</a>으로 남겨 주셔도 됩니다.</p>
-  </form>
+  </form></div>
   <footer><!--geo10-footer-->문의: 받으신 메일에 회신 또는 종합마케팅 상담 오픈채팅 https://open.kakao.com/o/s4E9FpRi<br>수신거부: 메일을 더 받고 싶지 않으시면 받으신 메일에 '수신거부'라고 회신 주시면 즉시 중단합니다.<br>운영: 코이노(코이노 마케팅) · 대표 이해빈 · 사업자등록번호 866-36-01408<br>경기도 안산시 상록구 후곡2길 50, 402호(사동) · 대표번호 <a href="tel:1577-3832" style="color:inherit">1577-3832</a> · <a href="mailto:gosidewin100@naver.com" style="color:inherit">gosidewin100@naver.com</a> · <a href="/about/">회사 소개</a></footer>
 </div>
 <script>
@@ -84,7 +79,7 @@ footer{font-size:11.5px;color:var(--muted);line-height:1.75;padding:6px 4px 0}
   function ping(t){} // Application tracking no longer writes to Google Sheets.
   ping('lp_'+seg);
   document.querySelectorAll('a[data-cta]').forEach(function(a){ a.addEventListener('click',function(){ ping('cta_'+seg+'_'+a.getAttribute('data-cta')); }); });
-  window.OFFER_CFG={track:'shortform',seg:seg,submit:'무료 숏폼 1편 신청하기',done:'신청이 접수됐습니다. 자료 확인을 위해 연락드리고, 완성본은 이메일로 보내드립니다.',kakao:'https://open.kakao.com/o/s4E9FpRi',ping:ping};
+  window.OFFER_CFG={track:'shortform',seg:seg,submit:'숏폼 + 채널 진단서 신청하기',done:'신청이 접수됐습니다. 자료 확인을 위해 연락드리고, 숏폼 1개와 운영 채널 진단서는 이메일로 보내드립니다.',kakao:'https://open.kakao.com/o/s4E9FpRi',ping:ping};
 })();
 </script>
 <script src="/assets/koino-intake.js?v=20261116"></script>
