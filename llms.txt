@@ -47,7 +47,7 @@
 - [무료 진단 신청](https://megahertz.co.kr/#apply)
 - [업종별 마케팅 대행](https://megahertz.co.kr/service/)
 - [채널별 운영 방법](https://megahertz.co.kr/channels/)
-- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 802편
+- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 803편
 
 ## 칼럼: 병원·의료(치과·피부과·성형외과·한의원·동물병원)
 - [요양병원 마케팅, 견적서에서 확인할 비용 항목 5가지](https://megahertz.co.kr/blog/nursing-hospital-marketing.html)
@@ -106,6 +106,7 @@
 - [미용실 플레이스 마케팅 대행, 요금표 확인부터 월 점검까지 한눈에](https://megahertz.co.kr/blog/hair-salon-place-marketing-process.html)
 
 ## 칼럼: 인테리어·부동산·쇼핑몰
+- [쇼핑몰 인스타 마케팅 대행, 맡기기 전 챙길 규정과 단계별 결과물 확인법](https://megahertz.co.kr/blog/shopping-mall-instagram-agency-process.html)
 - [부동산 홈페이지 제작, 매물 정보 오류 없이 시작하는 점검 순서](https://megahertz.co.kr/blog/real-estate-website-mistakes.html)
 - [부동산 플레이스 마케팅, 허위매물 오해 없이 매물 신뢰를 지키는 점검법](https://megahertz.co.kr/blog/real-estate-place-marketing-mistakes.html)
 - [쇼핑몰 체험단 마케팅 업체, 상세페이지와 후기 기준으로 고르는 법](https://megahertz.co.kr/blog/shopping-mall-experience-group-agency.html)
@@ -117,7 +118,6 @@
 - [인테리어 숏폼 마케팅, 시공 사례 신뢰를 지키는 점검 순서](https://megahertz.co.kr/blog/interior-shortform-marketing-mistakes.html)
 - [부동산 홈페이지 제작 대행, 매물 표기 점검을 거쳐 여는 진행 순서](https://megahertz.co.kr/blog/real-estate-homepage-agency-process.html)
 - [쇼핑몰 인스타 마케팅 비용, 견적서에서 먼저 확인할 작업 범위](https://megahertz.co.kr/blog/shopping-mall-instagram-marketing-cost.html)
-- [인테리어 플레이스 마케팅, 시공 사례와 등록 정보를 먼저 갖추는 점검법](https://megahertz.co.kr/blog/interior-place-marketing-mistakes.html)
 
 ## 칼럼: 비용·견적·업체 고르는 법
 - [인스타 가게 홍보, 월 견적 항목과 맡기는 순서 정리](https://megahertz.co.kr/blog/instagram-store-promotion-cost.html)
