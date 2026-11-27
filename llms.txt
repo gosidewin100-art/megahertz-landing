@@ -47,7 +47,7 @@
 - [무료 진단 신청](https://megahertz.co.kr/#apply)
 - [업종별 마케팅 대행](https://megahertz.co.kr/service/)
 - [채널별 운영 방법](https://megahertz.co.kr/channels/)
-- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 799편
+- [마케팅 대행 칼럼](https://megahertz.co.kr/blog/): 업종별·채널별 실무 가이드 800편
 
 ## 칼럼: 병원·의료(치과·피부과·성형외과·한의원·동물병원)
 - [요양병원 마케팅, 견적서에서 확인할 비용 항목 5가지](https://megahertz.co.kr/blog/nursing-hospital-marketing.html)
@@ -134,6 +134,7 @@
 - [프랜차이즈 홈페이지 제작 업체, 가맹 문의의 질을 높이는 선택 기준](https://megahertz.co.kr/blog/franchise-homepage-agency-checklist.html)
 
 ## 칼럼: 채널 운영 방법(블로그·플레이스·인스타·숏폼 등)
+- [프랜차이즈 숏폼 마케팅 대행사, 계약 전 질문으로 가맹 문의 품질 지키는 법](https://megahertz.co.kr/blog/franchise-short-form-agency-questions.html)
 - [프랜차이즈 블로그 마케팅 대행사, 가맹 문의 품질을 가늠하는 질문 정리](https://megahertz.co.kr/blog/franchise-blog-marketing-agency-question.html)
 - [식당 블로그 마케팅, 원산지 표기와 메뉴 정보부터 점검하는 법](https://megahertz.co.kr/blog/restaurant-blog-marketing-mistakes.html)
 - [미용실 인스타 마케팅 대행, 요금표 확인부터 월 점검까지 순서](https://megahertz.co.kr/blog/hair-salon-instagram-agency-process.html)
@@ -145,7 +146,6 @@
 - [필라테스 인스타 마케팅 대행, 체험 수업 예약까지 이어지는 진행 순서](https://megahertz.co.kr/blog/pilates-instagram-marketing-agency-proce.html)
 - [헬스장 체험단 마케팅 대행, 규정 확인까지 끝내는 진행 순서](https://megahertz.co.kr/blog/gym-trial-marketing-agency-process.html)
 - [헬스장 숏폼 마케팅 대행, 첫 상담부터 월 점검까지 한눈에 보기](https://megahertz.co.kr/blog/gym-shortform-marketing-process.html)
-- [프랜차이즈 인스타 마케팅 업체, 가맹 문의 품질을 가르는 확인 기준](https://megahertz.co.kr/blog/franchise-instagram-marketing-agency-gui.html)
 
 ## 더 보기
 - 업종·채널 안내와 최근 칼럼 본문 묶음: https://megahertz.co.kr/llms-full.txt
